@@ -1,4 +1,4 @@
-const QUESTIONS=[
+window.QUESTIONS=[
 {level:'beginner',text:'An MCP tool description is…',options:['an authorization grant','untrusted metadata','a signed package'],answer:1,explanation:'Descriptions must be reviewed and cannot grant permission.'},
 {level:'beginner',text:'Where should tenant checks live?',options:['only in prompts','at the tool/API boundary','only in UI'],answer:1,explanation:'Enforcement belongs in verifiable application code.'},
 {level:'beginner',text:'Why inventory transitive dependencies?',options:['to see the attack surface','to widen scopes','to avoid lockfiles'],answer:0,explanation:'Dependencies are part of the supply chain.'},
