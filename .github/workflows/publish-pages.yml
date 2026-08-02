@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - run: python -m compileall -q labs && python scripts/validate_notebooks.py
+      - run: python -m compileall -q labs && python scripts/validate_notebooks.py && python scripts/check_links.py
       - uses: actions/configure-pages@v5
       - run: |
           rm -rf site
@@ -32,6 +32,7 @@ jobs:
           cp -R assets/. site/assets/
           cp -R docs site/docs
           cp -R labs site/labs
+          cp -R tests site/tests
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

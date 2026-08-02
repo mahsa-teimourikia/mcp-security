@@ -18,6 +18,8 @@ MCP makes tools, resources, and prompts interoperable between AI applications an
 
 Read the [linked roadmap](docs/roadmap.md), the [complete training guide](docs/mcp-supply-chain-security.md), and the [MCP development and security technology review](docs/06-tools-and-technologies.md). Labs are deterministic and credential-free; notebooks explain the concepts and run the larger Python modules.
 
+The advanced path includes a [secure-server capstone](docs/07-mcp-capstone.md), [threat-model worksheet](docs/08-threat-model-worksheet.md), [operator checklist](docs/09-operator-checklist.md), and [MCP/A2A/tool-calling comparison](docs/10-protocol-comparison.md).
+
 ## Curated references
 
 [MCP specification](https://modelcontextprotocol.io/specification/latest) · [MCP security](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) · [MCP authorization](https://modelcontextprotocol.io/specification/latest/basic/authorization) · [NIST AI Agent Standards](https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative) · [OWASP Agentic Security](https://genai.owasp.org/initiatives/agentic-security-initiative/) · [SLSA](https://slsa.dev/) · [Sigstore](https://www.sigstore.dev/) · [Syft](https://github.com/anchore/syft) · [OSV-Scanner](https://google.github.io/osv-scanner/) · [AgentDojo](https://arxiv.org/abs/2406.13352).
