@@ -62,6 +62,8 @@ Use OAuth resource indicators and audience-bound tokens; never forward a bearer 
 | Testing | Semgrep, ZAP, garak, PyRIT, AgentDojo | static, protocol, and adversarial coverage |
 | Observability | OpenTelemetry | traces linking user, agent, server, tool, and outcome |
 
+For an implementation-focused comparison, see the [MCP development and security technology review](06-tools-and-technologies.md).
+
 ## References and research
 
 - [MCP specification](https://modelcontextprotocol.io/specification/latest), [security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices), and [MCP authorization](https://modelcontextprotocol.io/specification/latest/basic/authorization)
