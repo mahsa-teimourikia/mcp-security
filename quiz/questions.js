@@ -1,0 +1,13 @@
+const QUESTIONS=[
+{level:'beginner',text:'An MCP tool description is…',options:['an authorization grant','untrusted metadata','a signed package'],answer:1,explanation:'Descriptions must be reviewed and cannot grant permission.'},
+{level:'beginner',text:'Where should tenant checks live?',options:['only in prompts','at the tool/API boundary','only in UI'],answer:1,explanation:'Enforcement belongs in verifiable application code.'},
+{level:'beginner',text:'Why inventory transitive dependencies?',options:['to see the attack surface','to widen scopes','to avoid lockfiles'],answer:0,explanation:'Dependencies are part of the supply chain.'},
+{level:'intermediate',text:'What does digest pinning provide?',options:['mutable latest behavior','an immutable artifact reference','model confidence'],answer:1,explanation:'A digest identifies exact bytes.'},
+{level:'intermediate',text:'A valid signature proves…',options:['the package is risk-free','the artifact matches its signer','the model is correct'],answer:1,explanation:'Signatures provide authenticity/integrity, not absence of vulnerabilities.'},
+{level:'intermediate',text:'Which destination should egress block?',options:['approved HTTPS API','cloud metadata IP','approved ticket API'],answer:1,explanation:'Metadata endpoints are common SSRF targets.'},
+{level:'intermediate',text:'Why generate an SBOM?',options:['dependency visibility','automatic authorization','prompt filtering'],answer:0,explanation:'SBOMs support inventory and vulnerability response.'},
+{level:'advanced',text:'What prevents delegation escalation?',options:['scope intersection and depth limits','forwarded bearer tokens','unbounded retries'],answer:0,explanation:'Delegation must only narrow authority.'},
+{level:'advanced',text:'What is a confused deputy?',options:['a server misuses broad authority for a caller','a missing README','a slow model'],answer:0,explanation:'Caller-bound, audience-specific delegation mitigates it.'},
+{level:'advanced',text:'First containment for a malicious server?',options:['disable/revoke it','give it more scopes','wait for model updates'],answer:0,explanation:'Use a kill switch and preserve affected events.'},
+{level:'advanced',text:'Why validate tool output?',options:['it may contain prompt injection','it is always wrong','it replaces authorization'],answer:0,explanation:'Output is untrusted content and can redirect future actions.'},
+{level:'advanced',text:'A good release gate includes…',options:['pinned digest, signature, clean findings','latest dependency only','no rollback plan'],answer:0,explanation:'Reproducibility and vulnerability gates reduce supply-chain risk.'}];
