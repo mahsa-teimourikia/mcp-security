@@ -17,3 +17,10 @@ Each step links to its training document and runnable implementation. Read the t
 ## Technology decision checkpoint
 
 Before the capstone, read the [MCP development and security technology review](06-tools-and-technologies.md). Choose an SDK, transport, identity method, policy engine, provenance workflow, sandbox, testing strategy, and observability stack; record why each choice fits your threat model.
+
+## Capstone and operations
+
+7. [Secure support server capstone](07-mcp-capstone.md) · [threat-model worksheet](08-threat-model-worksheet.md)
+8. [Operator checklist](09-operator-checklist.md) · [protocol comparison](10-protocol-comparison.md)
+
+Run `python3 labs/capstone_secure_server.py`, inspect `tests/adversarial_cases.json`, and complete the operator checklist before calling the course complete.
