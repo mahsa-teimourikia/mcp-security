@@ -16,7 +16,7 @@ MCP makes tools, resources, and prompts interoperable between AI applications an
 | Intermediate | Signed artifacts, SBOMs, OAuth, egress, policy | Release a pinned server with gates |
 | Advanced | Delegation, incident response, red teaming, rollback | Contain a malicious server |
 
-Read the [roadmap](docs/roadmap.md) and [complete training guide](docs/mcp-supply-chain-security.md). Labs are deterministic and credential-free; notebooks explain the concepts and run the larger Python modules.
+Read the [linked roadmap](docs/roadmap.md), the [complete training guide](docs/mcp-supply-chain-security.md), and the [MCP development and security technology review](docs/06-tools-and-technologies.md). Labs are deterministic and credential-free; notebooks explain the concepts and run the larger Python modules.
 
 ## Curated references
 
