@@ -1,28 +1,19 @@
-# MCP security learning roadmap
+# Learning roadmap
 
-Each step links directly to its training document, runnable lab, and (where available) notebook. Complete the reading before opening the Hub checkpoint.
+Each step links to its training document and runnable implementation. Read the theory, run the lab, then use the Learning Hub checkpoint.
 
 ## Beginner — understand the boundary
 
-1. [MCP architecture and threat model](01-mcp-architecture-and-threat-model.md) · [manifest inventory lab](../labs/beginner/01_manifest_inventory.py)
-2. [Tool schemas and safe boundaries](04-runtime-isolation-and-tool-safety.md) · [tool boundary lab](../labs/beginner/02_tool_boundary.py)
-
-Outcome: identify every trust boundary and reject unsafe tools, schemas, paths, and destinations.
+[MCP architecture and threat model](01-mcp-architecture-and-threat-model.md) plus [runtime isolation and tool safety](04-runtime-isolation-and-tool-safety.md). Outcome: inventory a server and reject unsafe tool arguments.
 
 ## Intermediate — verify and authorize the supply chain
 
-3. [Provenance, SBOMs, and dependencies](03-supply-chain-provenance-and-dependencies.md) · [provenance lab](../labs/intermediate/01_provenance_gate.py) · [notebook](../labs/notebooks/02_provenance_gate.ipynb)
-4. [Protocol authentication and authorization](02-protocol-authentication-and-authorization.md) · [egress lab](../labs/intermediate/02_egress_policy.py)
-
-Outcome: release a pinned, signed server with explicit identity, policy, and egress gates.
+[Provenance and dependencies](03-supply-chain-provenance-and-dependencies.md) plus [protocol authentication and authorization](02-protocol-authentication-and-authorization.md). Outcome: release a pinned, authorized server with measurable gates.
 
 ## Advanced — operate protocols at scale
 
-5. [Delegation across MCP and A2A](02-protocol-authentication-and-authorization.md) · [delegation lab](../labs/advanced/01_delegation_contract.py)
-6. [Incident response and operations](05-incident-response-and-operations.md) · [containment lab](../labs/advanced/02_incident_response.py)
+[Delegation and protocol composition](02-protocol-authentication-and-authorization.md) plus [incident response and operations](05-incident-response-and-operations.md). Outcome: contain a malicious server and prove recovery.
 
-Outcome: contain a malicious server, preserve evidence, and recover from a known-good digest.
+## Technology decision checkpoint
 
-## Capstone sequence
-
-Inventory a real or sample server → threat-model its tools → generate an SBOM → verify a signature → run it in an isolated environment → exercise a denied call → simulate compromise → revoke and roll back. Record evidence for each release gate.
+Before the capstone, read the [MCP development and security technology review](06-tools-and-technologies.md). Choose an SDK, transport, identity method, policy engine, provenance workflow, sandbox, testing strategy, and observability stack; record why each choice fits your threat model.
