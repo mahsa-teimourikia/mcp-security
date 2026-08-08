@@ -18,6 +18,12 @@ Each step links to its training document and runnable implementation. Read the t
 
 Before the capstone, read the [MCP development and security technology review](06-tools-and-technologies.md). Choose an SDK, transport, identity method, policy engine, provenance workflow, sandbox, testing strategy, and observability stack; record why each choice fits your threat model.
 
+## Runtime assurance and observability
+
+9. [Runtime security, observability, and continuous assurance](11-runtime-assurance-and-observability.md) · [runtime policy lab](../labs/intermediate/03_runtime_policy.py) · [containment runbook](../labs/advanced/03_containment_runbook.py) · [notebook](../labs/notebooks/03_runtime_assurance.ipynb)
+
+Outcome: detect anomalous MCP behavior, apply a risk gate, and contain a compromised server using trace evidence.
+
 ## Capstone and operations
 
 7. [Secure support server capstone](07-mcp-capstone.md) · [threat-model worksheet](08-threat-model-worksheet.md)
