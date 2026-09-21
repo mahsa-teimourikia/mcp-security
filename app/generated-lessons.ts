@@ -37,7 +37,7 @@ export const lessons: Lesson[] = [
     "level": "Beginner",
     "step": "04",
     "title": "Building a Minimal Secure MCP Server",
-    "summary": "Build and inspect a real MCP server with the official Python SDK; expose a resource, prompt, two read-only tools, and a proposed side-effect tool; use typed interfaces, stable IDs, structured denials, approval binding, and security-relevant logs; and explain which controls this baseline deliberately defers to later identity, policy, isolation, and supply-chain courses.",
+    "summary": "Build, inspect, attack, and test a real Model Context Protocol server with the official Python SDK. The result is intentionally small enough to audit: three bounded tools, one versioned resource, one reviewed prompt, and no execution, filesystem, shell, or arbitrary-network capability.",
     "readme": "curriculum/beginner/04-minimal-secure-mcp-server/README.md",
     "lab": "curriculum/beginner/04-minimal-secure-mcp-server/lab.py",
     "notebook": "curriculum/beginner/04-minimal-secure-mcp-server/minimal_secure_server.ipynb"

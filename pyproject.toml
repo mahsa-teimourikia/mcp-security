@@ -13,7 +13,7 @@ dependencies = []
 
 [project.optional-dependencies]
 mcp = [
-  "mcp>=2,<3",
+  "mcp>=2.2,<2.3",
 ]
 notebooks = [
   "ipykernel>=6,<7",
