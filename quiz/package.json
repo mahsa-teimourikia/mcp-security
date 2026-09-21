@@ -1,0 +1,6 @@
+{
+  "name": "mcp-security-quiz",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test grading.test.mjs" }
+}

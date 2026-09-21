@@ -1,27 +1,90 @@
-# MCP and agent-protocol supply-chain security
+# MCP Security Engineering
 
-## Start with the Learning Hub
+> A notebook-first course for securing Model Context Protocol servers, clients,
+> tools, identities, dependencies, and agent-protocol workflows.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Learning materials](https://github.com/mahsa-teimourikia/mcp-security/actions/workflows/validate-learning.yml/badge.svg)](https://github.com/mahsa-teimourikia/mcp-security/actions/workflows/validate-learning.yml)
+
+## Start here: MCP Security Learning Hub
 
 **[Open the MCP Security Learning Hub →](https://mahsa-teimourikia.github.io/mcp-security/)**
 
-The Hub is the structured starting point. Choose Beginner, Intermediate, or Advanced, open a lesson, and work through **Learn → Lab → Checkpoint**. Then take the [full interactive quiz](https://mahsa-teimourikia.github.io/mcp-security/quiz/).
+The Hub is the main learning experience. Choose a level, open a topic, read the
+chapter, run its credential-free lab and notebook, then complete the
+[knowledge check](https://mahsa-teimourikia.github.io/mcp-security/quiz/).
 
 ## What you will learn
 
-MCP makes tools, resources, and prompts interoperable between AI applications and servers. A2A and related agent protocols add task and delegation boundaries. Each server, manifest, package, dependency, connector, and endpoint is therefore part of an AI supply chain. This course teaches how to verify provenance, review schemas, isolate runtimes, authenticate and authorize calls, constrain egress, validate outputs, observe behavior, and recover from compromise.
+MCP makes tools, resources, and prompts interoperable. It does not make them
+trusted. This course teaches the boundary that every lesson preserves:
+
+```text
+model or agent -> proposes, predicts, extracts, recommends
+trusted application -> validates, authorizes, executes, verifies, records
+```
 
 | Level | Focus | Outcome |
 | --- | --- | --- |
-| Beginner | MCP boundaries, manifests, schemas, safe tools | Reject unsafe tools and arguments |
-| Intermediate | Signed artifacts, SBOMs, OAuth, egress, policy | Release a pinned server with gates |
-| Advanced | Delegation, incident response, red teaming, rollback | Contain a malicious server |
+| Beginner | Lifecycle, trust boundaries, threat modeling, safe interfaces | Explain protocol authority and reject unsafe capabilities |
+| Intermediate | Identity, authorization, delegation, isolation, supply chain | Enforce least privilege and evidence-based release gates |
+| Advanced | Testing, composition, assurance, incidents, enterprise governance | Detect, contain, recover, and operate an MCP security program |
 
-Read the [linked roadmap](docs/roadmap.md), the [complete training guide](docs/mcp-supply-chain-security.md), and the [MCP development and security technology review](docs/06-tools-and-technologies.md). Labs are deterministic and credential-free; notebooks explain the concepts and run the larger Python modules.
+## Repository structure
 
-The advanced path includes [runtime assurance and observability](docs/11-runtime-assurance-and-observability.md), a [secure-server capstone](docs/07-mcp-capstone.md), [threat-model worksheet](docs/08-threat-model-worksheet.md), [operator checklist](docs/09-operator-checklist.md), and [MCP/A2A/tool-calling comparison](docs/10-protocol-comparison.md).
+```text
+app/          Vite/React Learning Hub
+assets/       Shared diagrams and brand assets
+curriculum/   Canonical beginner, intermediate, and advanced lessons
+quiz/         Standalone, tested knowledge check
+scripts/      Course and link validators
+tests/        Curriculum and production-site smoke tests
+```
 
-## Curated references
+Every published lesson is colocated:
 
-[MCP specification](https://modelcontextprotocol.io/specification/latest) · [MCP security](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) · [MCP authorization](https://modelcontextprotocol.io/specification/latest/basic/authorization) · [NIST AI Agent Standards](https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative) · [OWASP Agentic Security](https://genai.owasp.org/initiatives/agentic-security-initiative/) · [SLSA](https://slsa.dev/) · [Sigstore](https://www.sigstore.dev/) · [Syft](https://github.com/anchore/syft) · [OSV-Scanner](https://google.github.io/osv-scanner/) · [AgentDojo](https://arxiv.org/abs/2406.13352).
+```text
+curriculum/<level>/<number-topic>/
+├── README.md     # theory, architecture, failures, and exercises
+├── lab.py        # reusable credential-free implementation
+└── *.ipynb       # guided execution and reflection
+```
 
-Learning with One+i · responsible AI, real-world impact. [oneplusi.io](https://oneplusi.io)
+See the [course map](COURSE_MAP.md), [learning guide](LEARNING.md), and
+[roadmap](ROADMAP.md) for the full progression.
+
+## Run locally
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -e '.[contributor]'
+make test-python
+```
+
+Launch the Learning Hub:
+
+```bash
+cd app
+npm ci
+npm run dev
+```
+
+Labs use synthetic data and avoid live side effects by default. Provider or
+platform integrations must be explicitly optional and reuse the same
+validation, authorization, and audit boundaries.
+
+## Core references
+
+- [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest)
+- [Official MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
+- [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
+- [OAuth 2.0 Security Best Current Practice (RFC 9700)](https://www.rfc-editor.org/rfc/rfc9700)
+- [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/)
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [SLSA supply-chain levels](https://slsa.dev/)
+
+## Contributing and license
+
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before
+opening a pull request. This repository is licensed under the [MIT License](LICENSE).
