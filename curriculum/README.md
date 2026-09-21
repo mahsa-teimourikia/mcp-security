@@ -12,6 +12,9 @@ teach a normal path, a deliberately vulnerable variant, an attack trace, a
 control, and a retest. Offline labs are the default; integrations that need
 credentials are explicitly optional.
 
+The systematic quality review is tracked in the repository's
+[course-by-course review plan](../COURSE_REVIEW_PLAN.md).
+
 ## Progression
 
 | Level | Topics |

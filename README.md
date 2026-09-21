@@ -50,8 +50,9 @@ curriculum/<level>/<number-topic>/
 └── *.ipynb       # guided execution and reflection
 ```
 
-See the [course map](COURSE_MAP.md), [learning guide](LEARNING.md), and
-[roadmap](ROADMAP.md) for the full progression.
+See the [course map](COURSE_MAP.md), [learning guide](LEARNING.md),
+[course-by-course review plan](COURSE_REVIEW_PLAN.md), and [roadmap](ROADMAP.md)
+for the full progression.
 
 ## Run locally
 

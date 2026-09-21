@@ -6,7 +6,8 @@ def main():
     missing=[]
     markdown=[
         ROOT/'README.md', ROOT/'CONTRIBUTING.md', ROOT/'COURSE_MAP.md',
-        ROOT/'LEARNING.md', ROOT/'ROADMAP.md', ROOT/'CURRICULUM_EVOLUTION_PLAN.md',
+        ROOT/'LEARNING.md', ROOT/'ROADMAP.md', ROOT/'COURSE_REVIEW_PLAN.md',
+        ROOT/'CURRICULUM_EVOLUTION_PLAN.md',
         *(ROOT/'docs').glob('*.md'), *(ROOT/'curriculum').glob('**/*.md'),
     ]
     for path in markdown:
@@ -21,6 +22,7 @@ def main():
         'app/index.html', 'app/page.tsx', 'app/package.json',
         'quiz/index.html', 'quiz/questions.mjs', 'quiz/grading.test.mjs',
         'assets/one-plus-i.png', 'COURSE_MAP.md', 'LEARNING.md', 'ROADMAP.md',
+        'COURSE_REVIEW_PLAN.md',
     ]:
         if not (ROOT/required).exists(): missing.append(required)
     if missing: raise SystemExit('\n'.join(missing))

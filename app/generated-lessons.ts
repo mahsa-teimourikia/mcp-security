@@ -6,8 +6,8 @@ export const lessons: Lesson[] = [
     "id": "beginner-01",
     "level": "Beginner",
     "step": "01",
-    "title": "MCP Architecture, Lifecycle, and Trust Boundaries",
-    "summary": "After this course, you can trace a Model Context Protocol (MCP) session from connection through shutdown; distinguish host, client, server, tool, resource, and prompt responsibilities; identify the principal, authority, data, logging, failure, and revocation path at every boundary; and reject the mistake of treating a discovered capability or natural-language description as permission.",
+    "title": "MCP Architecture, Protocol Eras, and Trust Boundaries",
+    "summary": "Learn the current MCP architecture and protocol eras by inspecting a real SDK session, enforcing a tenant-aware host policy, and proving that discovery never grants authorization.",
     "readme": "curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/README.md",
     "lab": "curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/lab.py",
     "notebook": "curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/mcp_architecture_lifecycle.ipynb"
