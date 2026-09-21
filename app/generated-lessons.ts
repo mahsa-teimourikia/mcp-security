@@ -27,7 +27,7 @@ export const lessons: Lesson[] = [
     "level": "Beginner",
     "step": "03",
     "title": "Secure Tool, Resource, and Prompt Interface Design",
-    "summary": "Design narrow MCP tools with typed schemas and semantic validation; distinguish read and proposed-write operations; scope resources by URI, tenant, ownership, freshness, and classification; and treat server-provided prompts and all untrusted MCP content as configuration or data—not as instructions with authority.",
+    "summary": "Design narrow MCP interfaces that preserve identity and tenant boundaries, separate proposals from effects, validate both inputs and outputs, and keep untrusted content from acquiring authority.",
     "readme": "curriculum/beginner/03-secure-tool-resource-prompt-interfaces/README.md",
     "lab": "curriculum/beginner/03-secure-tool-resource-prompt-interfaces/lab.py",
     "notebook": "curriculum/beginner/03-secure-tool-resource-prompt-interfaces/secure_interfaces.ipynb"
