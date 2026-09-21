@@ -1,0 +1,45 @@
+name: Validate learning materials
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-course:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install course validation dependencies
+        run: python -m pip install -e '.[contributor]'
+      - name: Compile course modules
+        run: python -m compileall -q curriculum scripts tests
+      - name: Validate curriculum, notebooks, and links
+        run: |
+          python -m pytest -q
+          python scripts/run_labs.py
+          python scripts/validate_notebooks.py
+          python scripts/execute-notebooks.py --timeout 90
+          python scripts/check_links.py
+
+  validate-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+        working-directory: app
+      - run: npm test
+        working-directory: app

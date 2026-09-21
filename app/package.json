@@ -1,0 +1,27 @@
+{
+  "name": "mcp-security-learning-hub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-lessons.mjs",
+    "predev": "npm run generate",
+    "dev": "vite",
+    "prebuild:pages": "npm run generate",
+    "build:pages": "vite build && node scripts/copy-static.mjs",
+    "precheck:links": "npm run generate",
+    "check:links": "node scripts/validate-learning-links.mjs",
+    "test": "npm run check:links && npm run build:pages && node --test ../quiz/grading.test.mjs && node ../tests/pages-smoke.mjs"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.0"
+  }
+}
