@@ -38,8 +38,8 @@ system instead of introducing disconnected toy examples.
 | # | Course | Primary implementation and ecosystem emphasis | Status |
 | ---: | --- | --- | --- |
 | 01 | Architecture, protocol eras, trust boundaries | MCP spec 2026-07-28, Python SDK v2, Inspector v2, modern/legacy interoperability | Complete (2026-09-20) |
-| 02 | Threat modeling | STRIDE, attack trees, data-flow diagrams, MITRE ATLAS/OWASP mappings | Next |
-| 03 | Secure tools/resources/prompts | JSON Schema, typed validation, annotations, output validation, contract tests | Queued |
+| 02 | Threat modeling | STRIDE, attack trees, data-flow diagrams, MITRE ATLAS/OWASP mappings | Complete (2026-09-20) |
+| 03 | Secure tools/resources/prompts | JSON Schema, typed validation, annotations, output validation, contract tests | Next |
 | 04 | Minimal secure server | Official Python SDK server, stdio, structured outputs, errors, Inspector | Queued |
 | 05 | Client/host security | Official client, capability risk gates, origin/redirect controls, caches | Queued |
 | 06 | Authentication and OAuth | MCP authorization spec, OAuth 2.1, protected-resource metadata, PKCE | Queued |
@@ -90,6 +90,30 @@ For each course, the implementation change should record:
 - unresolved limitations intentionally deferred to a named later course; and
 - the focused and full validation commands that passed.
 
-Course 01 establishes the reference shape and passed its focused tests, all 29
-credential-free labs, all 29 notebooks, link checks, quiz tests, and Learning
-Hub production build on 2026-09-20. Course 02 is the next review target.
+## Completed review records
+
+### Course 01 — Architecture, protocol eras, and trust boundaries
+
+- Corrected the learner path for MCP 2026-07-28 while retaining explicit
+  legacy/dual-era coverage.
+- Replaced the protocol-shaped fixture with an official Python SDK v2 session,
+  host policy, adversarial cases, focused tests, and evidence-scoring notebook.
+- Passed focused tests, all 29 labs/notebooks, links, quiz, and site build on
+  2026-09-20.
+
+### Course 02 — Threat modeling MCP and agent protocol systems
+
+- Sources checked 2026-09-20: OWASP threat modeling, Agentic AI and MCP
+  projects; NIST SP 800-154 and AI 100-2e2025; Microsoft STRIDE tooling; MCP
+  2026-07-28 guidance; Threat Dragon, pytm, Threagile; and current MCP research.
+- Replaced non-empty-field “100% coverage” and heuristic residual risk with an
+  eight-component/eight-flow model, six STRIDE threats, bounded attack paths,
+  explicit ordinal risk semantics, receipt-bound evidence, and separate design
+  traceability versus verified-control metrics.
+- Added 16 focused positive, negative, boundary, evidence-integrity, metric, and
+  attack-path tests plus a failure-injection notebook and four checkpoints.
+- Passed 28 repository tests, all 29 credential-free labs, all 29 notebooks,
+  51-file link validation, 87 Learning Hub resources, quiz/smoke tests, the
+  production build, and an npm audit with zero vulnerabilities on 2026-09-20.
+
+Course 03 is the next review target.
