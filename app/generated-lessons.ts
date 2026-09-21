@@ -17,7 +17,7 @@ export const lessons: Lesson[] = [
     "level": "Beginner",
     "step": "02",
     "title": "Threat Modeling MCP and Agent Protocol Systems",
-    "summary": "Build a data-flow diagram for an MCP integration; name assets, principals, boundaries, and assumptions; use STRIDE, attack trees, misuse cases, and security invariants; and turn every material threat into a control, executable test, telemetry signal, incident action, and accepted residual-risk decision.",
+    "summary": "Build a versioned, testable threat model for an MCP support platform and learn to distinguish complete documentation from verified security controls.",
     "readme": "curriculum/beginner/02-threat-modeling-mcp-agent-protocols/README.md",
     "lab": "curriculum/beginner/02-threat-modeling-mcp-agent-protocols/lab.py",
     "notebook": "curriculum/beginner/02-threat-modeling-mcp-agent-protocols/mcp_threat_modeling.ipynb"
