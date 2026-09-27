@@ -107,7 +107,7 @@ export const lessons: Lesson[] = [
     "level": "Intermediate",
     "step": "11",
     "title": "Prompt Injection, Tool Poisoning, and Untrusted MCP Content",
-    "summary": "Treat tool descriptions, prompt templates, resources, results, and external documents as untrusted content; detect risk signals without granting authority; and require independent authorization, validation, and approval before a model can take a new action influenced by that content.",
+    "summary": "Prompt injection is not solved by finding the phrase “ignore previous instructions.” A model consumes instructions and data through the same language channel, so a ticket, webpage, tool result, image, resource, or MCP tool description can influence its next proposal. The durable security boundary must therefore live outside the model.",
     "readme": "curriculum/intermediate/11-prompt-injection-tool-poisoning-untrusted-content/README.md",
     "lab": "curriculum/intermediate/11-prompt-injection-tool-poisoning-untrusted-content/lab.py",
     "notebook": "curriculum/intermediate/11-prompt-injection-tool-poisoning-untrusted-content/untrusted_content.ipynb"
