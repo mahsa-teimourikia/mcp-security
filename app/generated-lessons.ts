@@ -47,7 +47,7 @@ export const lessons: Lesson[] = [
     "level": "Beginner",
     "step": "05",
     "title": "MCP Client/Host Security and Capability Negotiation",
-    "summary": "Review a server before connection and after capability discovery; distinguish trusted server identity from untrusted server metadata; bind a capability cache to identity, version, and artifact digest; filter risky tools/resources/prompts; and revoke a server so new sessions and cached capabilities are denied.",
+    "summary": "Build a fail-closed MCP host that verifies a server before connection, reviews its complete discovered contract, exposes only namespaced and authorized tools, validates results, partitions capability caches, and makes revocation effective for an already-open client connection.",
     "readme": "curriculum/beginner/05-client-host-security-capability-negotiation/README.md",
     "lab": "curriculum/beginner/05-client-host-security-capability-negotiation/lab.py",
     "notebook": "curriculum/beginner/05-client-host-security-capability-negotiation/capability_negotiation.ipynb"
