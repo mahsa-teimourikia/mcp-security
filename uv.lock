@@ -1186,10 +1186,12 @@ contributor = [
     { name = "mcp" },
     { name = "nbclient" },
     { name = "nbformat" },
+    { name = "pyjwt", extra = ["crypto"] },
     { name = "pytest" },
 ]
 mcp = [
     { name = "mcp" },
+    { name = "pyjwt", extra = ["crypto"] },
 ]
 notebooks = [
     { name = "ipykernel" },
@@ -1202,10 +1204,11 @@ notebooks = [
 requires-dist = [
     { name = "ipykernel", marker = "extra == 'notebooks'", specifier = ">=6,<7" },
     { name = "jupyter", marker = "extra == 'notebooks'", specifier = ">=1,<2" },
-    { name = "mcp", marker = "extra == 'mcp'", specifier = ">=2,<3" },
+    { name = "mcp", marker = "extra == 'mcp'", specifier = ">=2.2,<2.3" },
     { name = "mcp-security-engineering", extras = ["mcp", "notebooks"], marker = "extra == 'contributor'" },
     { name = "nbclient", marker = "extra == 'notebooks'", specifier = ">=0.10,<1" },
     { name = "nbformat", marker = "extra == 'notebooks'", specifier = ">=5.10,<6" },
+    { name = "pyjwt", extras = ["crypto"], marker = "extra == 'mcp'", specifier = ">=2.10,<3" },
     { name = "pytest", marker = "extra == 'contributor'", specifier = ">=8,<9" },
 ]
 provides-extras = ["mcp", "notebooks", "contributor"]
@@ -1378,7 +1381,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "python_full_version < '3.12' or python_full_version >= '3.14' or sys_platform != 'emscripten'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
@@ -2192,8 +2195,8 @@ name = "uvicorn"
 version = "0.53.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "click" },
-    { name = "h11" },
+    { name = "click", marker = "python_full_version < '3.12' or python_full_version >= '3.14' or sys_platform != 'emscripten'" },
+    { name = "h11", marker = "python_full_version < '3.12' or python_full_version >= '3.14' or sys_platform != 'emscripten'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/5d/ad/04bbb797c84fc1f26cb171f7394716f4865ffb8d8c5e1eef42565c2dfa6b/uvicorn-0.53.0.tar.gz", hash = "sha256:a9356f0cb89b3b8621529c5d5eebd69bfe154f4c3f68b4cf2de47e45fa855c2e", size = 110881, upload-time = "2026-09-14T07:44:23.815Z" }
 wheels = [
