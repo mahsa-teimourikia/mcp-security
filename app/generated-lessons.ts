@@ -86,8 +86,8 @@ export const lessons: Lesson[] = [
     "id": "intermediate-09",
     "level": "Intermediate",
     "step": "09",
-    "title": "Runtime Isolation and Sandboxing",
-    "summary": "Define a sandbox boundary for a local or remote MCP server; constrain filesystem, process, environment, network, and identity; distinguish policy simulation from enforcement; and collect evidence for a denied escape attempt.",
+    "title": "Runtime Isolation and Sandboxing for MCP Servers",
+    "summary": "> Course 09 · Intermediate · 90–120 minutes > > Admit a pinned least-privilege workload, execute it inside an observable bounded > process, attack the boundary, and map the same invariants to containers, > sandboxed runtimes, microVMs, or WebAssembly without overstating the evidence.",
     "readme": "curriculum/intermediate/09-runtime-isolation-sandboxing/README.md",
     "lab": "curriculum/intermediate/09-runtime-isolation-sandboxing/lab.py",
     "notebook": "curriculum/intermediate/09-runtime-isolation-sandboxing/runtime_isolation.ipynb"
