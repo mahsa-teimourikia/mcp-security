@@ -67,7 +67,7 @@ export const lessons: Lesson[] = [
     "level": "Intermediate",
     "step": "07",
     "title": "Authorization and Policy Enforcement",
-    "summary": "Evaluate a decision over principal, action, resource, tenant, purpose, risk, and approval; compare RBAC, ABAC, and relationship-based authorization; and enforce denial at a tool/API boundary outside the model.",
+    "summary": "Build and attack-test a deterministic authorization layer for MCP tools. The finished lab combines role, attribute, and relationship checks; derives identity from trusted session state; evaluates principal/action/resource/context inputs; enforces obligations; binds high-impact approval to an exact proposal; and proves fail-closed, single-use, and idempotent behavior with the official MCP Python SDK.",
     "readme": "curriculum/intermediate/07-authorization-policy-enforcement/README.md",
     "lab": "curriculum/intermediate/07-authorization-policy-enforcement/lab.py",
     "notebook": "curriculum/intermediate/07-authorization-policy-enforcement/policy_enforcement.ipynb"
