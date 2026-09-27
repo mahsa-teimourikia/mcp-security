@@ -97,7 +97,7 @@ export const lessons: Lesson[] = [
     "level": "Intermediate",
     "step": "10",
     "title": "Filesystem, Network, SSRF, and Egress Security",
-    "summary": "Constrain file access and outbound network calls; recognize SSRF through cloud metadata, private ranges, redirects, DNS rebinding, and URL parsing confusion; and verify egress at the network boundary rather than trusting a model-selected URL or an application allow-list alone.",
+    "summary": "An MCP tool is not safe merely because its description says “read a file” or “look up a ticket.” If a caller can choose a path, URL, host, header, or redirect target, untrusted content can steer the server into authority the user never intended to grant.",
     "readme": "curriculum/intermediate/10-filesystem-network-ssrf-egress-security/README.md",
     "lab": "curriculum/intermediate/10-filesystem-network-ssrf-egress-security/lab.py",
     "notebook": "curriculum/intermediate/10-filesystem-network-ssrf-egress-security/egress_security.ipynb"
