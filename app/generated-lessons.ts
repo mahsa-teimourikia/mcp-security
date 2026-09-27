@@ -57,7 +57,7 @@ export const lessons: Lesson[] = [
     "level": "Intermediate",
     "step": "06",
     "title": "MCP Authentication and OAuth Security",
-    "summary": "Validate a token's issuer, audience, expiry, scopes, and revocation state; separate OAuth authentication from authorization; explain authorization server, resource server, client, and resource owner roles; and reject token passthrough and confused-audience patterns in MCP integrations.",
+    "summary": "Build and attack-test an OAuth-protected MCP resource server. The finished lab uses signed JWT access tokens, PyJWT, the official MCP Python SDK authorization middleware, protected-resource metadata, real HTTP status codes, trusted identity context, tenant-aware tool checks, key rotation, revocation, and redacted evidence.",
     "readme": "curriculum/intermediate/06-mcp-authentication-oauth-security/README.md",
     "lab": "curriculum/intermediate/06-mcp-authentication-oauth-security/lab.py",
     "notebook": "curriculum/intermediate/06-mcp-authentication-oauth-security/oauth_security.ipynb"
