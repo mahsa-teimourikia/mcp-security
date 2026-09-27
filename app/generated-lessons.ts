@@ -76,8 +76,8 @@ export const lessons: Lesson[] = [
     "id": "intermediate-08",
     "level": "Intermediate",
     "step": "08",
-    "title": "Delegation, Token Exchange, and Confused Deputy",
-    "summary": "Trace authority from user to agent to MCP server to downstream API; exchange a parent grant for a strictly narrower child grant; enforce audience, tenant, resource, action, purpose, expiry, and maximum depth; and detect a confused deputy before a privileged server accesses another caller's data.",
+    "title": "Delegation, Token Exchange, and Confused-Deputy Prevention",
+    "summary": "> Course 08 · Intermediate · 90–120 minutes > Build a signed, audience-bound delegation path from an MCP host through an MCP > server to a downstream API—and prove that it fails closed.",
     "readme": "curriculum/intermediate/08-delegation-token-exchange-confused-deputy/README.md",
     "lab": "curriculum/intermediate/08-delegation-token-exchange-confused-deputy/lab.py",
     "notebook": "curriculum/intermediate/08-delegation-token-exchange-confused-deputy/delegation_security.ipynb"
