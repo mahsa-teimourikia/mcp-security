@@ -117,7 +117,7 @@ export const lessons: Lesson[] = [
     "level": "Intermediate",
     "step": "12",
     "title": "Supply-Chain Provenance, SBOMs, Signing, and Dependencies",
-    "summary": "Verify an immutable server artifact; distinguish integrity, provenance, and vulnerability evidence; generate and use SBOM inventory; enforce trusted build provenance; and reject a signed artifact when its release evidence is incomplete or unacceptable.",
+    "summary": "An MCP server is executable authority. This course builds a release gate that admits only the exact server bytes supported by authenticated, mutually bound, fresh supply-chain evidence—and then promotes those bytes once by digest.",
     "readme": "curriculum/intermediate/12-supply-chain-provenance-sbom-signing-dependencies/README.md",
     "lab": "curriculum/intermediate/12-supply-chain-provenance-sbom-signing-dependencies/lab.py",
     "notebook": "curriculum/intermediate/12-supply-chain-provenance-sbom-signing-dependencies/provenance_gate.ipynb"
