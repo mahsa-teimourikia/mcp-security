@@ -137,7 +137,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "14",
     "title": "MCP Security Testing and Fuzzing",
-    "summary": "Turn MCP security invariants into deterministic tests; build negative contract, parser, schema, resource, and capability cases; use bounded fuzzing/mutation to find unexpected accepts; and preserve failures as regression fixtures.",
+    "summary": "Security testing turns an MCP trust model into executable counterexamples. This course builds a bounded, reproducible test system that mutates protocol envelopes, tool contracts, identity boundaries, approvals, and call sequences; judges outcomes with an independent oracle; preserves minimal failures; and measures completed disclosures or effects rather than trusting a target's response text.",
     "readme": "curriculum/advanced/14-mcp-security-testing-fuzzing/README.md",
     "lab": "curriculum/advanced/14-mcp-security-testing-fuzzing/lab.py",
     "notebook": "curriculum/advanced/14-mcp-security-testing-fuzzing/security_testing.ipynb"

@@ -24,7 +24,8 @@ notebooks = [
 ]
 contributor = [
   "mcp-security-engineering[mcp,notebooks]",
-  "pytest>=8,<9",
+  "hypothesis>=6.168,<7",
+  "pytest>=9.0.3,<10",
 ]
 
 [tool.setuptools]
