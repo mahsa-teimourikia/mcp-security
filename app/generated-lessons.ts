@@ -127,7 +127,7 @@ export const lessons: Lesson[] = [
     "level": "Intermediate",
     "step": "13",
     "title": "Secure MCP CI/CD and Release Gates",
-    "summary": "Design a promotion pipeline that produces and verifies tests, provenance, SBOM, vulnerability, policy, deployment, and rollback evidence; and reject manual or model-generated claims that are not attached to an immutable artifact.",
+    "summary": "An MCP server is executable authority: changing its artifact can change the tools, descriptions, schemas, dependencies, credentials, and effects exposed to an agent. This course builds a fail-closed release controller that admits reviewed source, correlates signed evidence, authorizes one exact deployment, handles ambiguous outcomes safely, and proves either healthy production state or verified rollback.",
     "readme": "curriculum/intermediate/13-secure-mcp-cicd-release-gates/README.md",
     "lab": "curriculum/intermediate/13-secure-mcp-cicd-release-gates/lab.py",
     "notebook": "curriculum/intermediate/13-secure-mcp-cicd-release-gates/release_gates.ipynb"
