@@ -14,13 +14,15 @@ dependencies = []
 [project.optional-dependencies]
 mcp = [
   "mcp>=2.2,<2.3",
-  "PyJWT[crypto]>=2.10,<3",
+  "PyJWT[crypto]>=2.15,<3",
 ]
 notebooks = [
   "ipykernel>=6,<7",
   "jupyter>=1,<2",
+  "jupyterlab>=4.6.4,<5",
   "nbclient>=0.10,<1",
   "nbformat>=5.10,<6",
+  "notebook>=7.6.3,<8",
 ]
 contributor = [
   "mcp-security-engineering[mcp,notebooks]",

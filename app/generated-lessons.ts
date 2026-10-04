@@ -147,7 +147,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "15",
     "title": "MCP Red Teaming and Adversarial Evaluation",
-    "summary": "Plan authorized red-team campaigns against MCP host, client, server, tool, resource, prompt, identity, registry, and supply-chain boundaries; measure attack success, detection, containment, and safe completion; and convert each finding into a reproducible regression test and owned remediation.",
+    "summary": "Red teaming tests whether an MCP-enabled system can be induced to violate a security objective under realistic adversarial pressure. This course turns a threat model into an authorized campaign, exercises the model and the application around it, judges observable outcomes independently, and promotes every confirmed failure into a reproducible security regression.",
     "readme": "curriculum/advanced/15-mcp-red-teaming-adversarial-evaluation/README.md",
     "lab": "curriculum/advanced/15-mcp-red-teaming-adversarial-evaluation/lab.py",
     "notebook": "curriculum/advanced/15-mcp-red-teaming-adversarial-evaluation/red_team_evaluation.ipynb"
