@@ -157,7 +157,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "16",
     "title": "MCP Runtime Observability and Continuous Assurance",
-    "summary": "Define security-relevant MCP traces; correlate artifact identity, session, principal/tenant, capability, tool/resource, destination, policy decision, and result; detect behavioral drift; and route signals to bounded controls without granting new authority.",
+    "summary": "Runtime observability makes security decisions, effects, and failures explainable. Continuous assurance uses that evidence to test whether the deployed MCP system still satisfies its reviewed security invariants. This course builds both without turning telemetry into a new source of authority or sensitive-data exposure.",
     "readme": "curriculum/advanced/16-runtime-observability-continuous-assurance/README.md",
     "lab": "curriculum/advanced/16-runtime-observability-continuous-assurance/lab.py",
     "notebook": "curriculum/advanced/16-runtime-observability-continuous-assurance/runtime_assurance.ipynb"
