@@ -167,7 +167,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "17",
     "title": "MCP Server Registry, Discovery, Trust, and Enterprise Gateways",
-    "summary": "Design a server onboarding record; separate discovery from enablement; bind identity, owner, endpoint/launch specification, artifact digest, capabilities, review, and revocation; and use an enterprise gateway as a policy/observability point without assuming it removes server-side controls.",
+    "summary": "Server discovery makes an MCP integration findable. It does not make the integration trustworthy, approved, correctly deployed, or authorized for a particular user. This course builds the enterprise control plane between those two states and tests whether its decisions survive drift, multi-tenant routing, gateway bypass, stale caches, and emergency revocation.",
     "readme": "curriculum/advanced/17-server-registry-discovery-trust-enterprise-gateways/README.md",
     "lab": "curriculum/advanced/17-server-registry-discovery-trust-enterprise-gateways/lab.py",
     "notebook": "curriculum/advanced/17-server-registry-discovery-trust-enterprise-gateways/registry_trust.ipynb"
