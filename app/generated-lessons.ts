@@ -177,7 +177,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "18",
     "title": "Agent-to-Agent / A2A Security and Delegation",
-    "summary": "Authenticate agent peers, authorize a bounded task rather than a broad agent, preserve tenant/purpose/trace linkage, limit lifetime and hops, and prevent a downstream agent from treating a peer request as unrestricted authority.",
+    "summary": "Authenticate A2A peers, attenuate human authority into a task-bound grant, enforce it independently at every hop, and evaluate replay, tenant, lifecycle, retry, notification, and outcome failures without treating an agent identity or protocol field as authorization.",
     "readme": "curriculum/advanced/18-agent-to-agent-a2a-security-delegation/README.md",
     "lab": "curriculum/advanced/18-agent-to-agent-a2a-security-delegation/lab.py",
     "notebook": "curriculum/advanced/18-agent-to-agent-a2a-security-delegation/a2a_security.ipynb"
