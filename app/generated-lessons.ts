@@ -187,7 +187,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "19",
     "title": "Protocol Composition Security: MCP + A2A + Agent Runtimes",
-    "summary": "Identify security-context loss at protocol adapters; preserve authenticated subject, tenant, action, resource/purpose, audience, expiry, approval, trace, and error semantics; and reject an adapter that broadens authority or silently converts a denial into a retry/allow.",
+    "summary": "An A2A peer, an MCP server, and an agent runtime can each be locally secure while the application connecting them is unsafe. The adapter is not plumbing: it is a security-critical policy enforcement point, credential broker, state machine, error translator, and evidence producer.",
     "readme": "curriculum/advanced/19-protocol-composition-security/README.md",
     "lab": "curriculum/advanced/19-protocol-composition-security/lab.py",
     "notebook": "curriculum/advanced/19-protocol-composition-security/protocol_composition.ipynb"
