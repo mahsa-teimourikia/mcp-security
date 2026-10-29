@@ -197,7 +197,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "20",
     "title": "Multi-Agent and Cross-Server Attack Paths",
-    "summary": "Model lateral movement across hosts, agents, MCP servers, registries, gateways, and downstream APIs; identify transitive authority; calculate bounded reachability; and place controls that reduce blast radius and support containment.",
+    "summary": "A collection of individually reviewed agents, MCP servers, gateways, and APIs can still create an unsafe system. Authority, credentials, content, and network reachability compose across boundaries. A compromised analytics server may reuse a shared credential, bypass a gateway, poison shared memory, or exploit a stale registry binding to reach data its own interface could never access.",
     "readme": "curriculum/advanced/20-multi-agent-cross-server-attack-paths/README.md",
     "lab": "curriculum/advanced/20-multi-agent-cross-server-attack-paths/lab.py",
     "notebook": "curriculum/advanced/20-multi-agent-cross-server-attack-paths/attack_paths.ipynb"
