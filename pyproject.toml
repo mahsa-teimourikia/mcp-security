@@ -15,6 +15,7 @@ dependencies = []
 mcp = [
   "a2a-sdk>=1.2.3,<2",
   "mcp>=2.2,<2.3",
+  "networkx>=3.5,<4",
   "opentelemetry-sdk>=1.45,<2",
   "PyJWT[crypto]>=2.15,<3",
 ]
