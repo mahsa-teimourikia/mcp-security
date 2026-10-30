@@ -207,7 +207,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "21",
     "title": "MCP Incident Detection, Containment, and Forensics",
-    "summary": "Detect suspicious server behavior; contain it through server, session, credential, and network controls; preserve redacted, integrity-protected evidence; scope affected users/artifacts; and coordinate recovery without destroying the forensic record.",
+    "summary": "An MCP incident is not resolved because an agent says it is safe or a registry row says disabled. A defensible response admits trustworthy telemetry, separates observed facts from hypotheses, correlates independent effect evidence, scopes only within explicit investigator authority, preserves a verifiable redacted record, executes the minimum authorized containment exactly once, and proves the controls took effect.",
     "readme": "curriculum/advanced/21-incident-detection-containment-forensics/README.md",
     "lab": "curriculum/advanced/21-incident-detection-containment-forensics/lab.py",
     "notebook": "curriculum/advanced/21-incident-detection-containment-forensics/incident_forensics.ipynb"
