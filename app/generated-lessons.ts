@@ -267,7 +267,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "27",
     "title": "MCP Security Observability and SOC Integration",
-    "summary": "Normalize MCP telemetry for SOC workflows; retain server digest, trace, tenant/principal scope, capability/action, destination, policy decision, and severity; enrich/dedupe alerts; and preserve a path from alert to containment and recovery evidence.",
+    "summary": "Security observability for MCP is the ability to reconstruct and evaluate what authority was requested, decided, exercised, and independently observed across the host, server, policy, network, and resource boundaries. SOC integration is the controlled conversion of that evidence into detections, cases, response proposals, and verified outcomes.",
     "readme": "curriculum/advanced/27-mcp-security-observability-soc-integration/README.md",
     "lab": "curriculum/advanced/27-mcp-security-observability-soc-integration/lab.py",
     "notebook": "curriculum/advanced/27-mcp-security-observability-soc-integration/soc_integration.ipynb"
