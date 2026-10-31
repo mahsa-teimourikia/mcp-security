@@ -237,7 +237,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "24",
     "title": "MCP Identity and Non-Human Identity Governance",
-    "summary": "Govern hosts, clients, servers, agents, gateways, CI jobs, and service accounts as non-human identities; assign ownership; bind each identity to audience and least privilege; automate short-lived issuance/rotation/revocation; and detect orphaned or overprivileged identities.",
+    "summary": "Every MCP host, client, server, agent, gateway, CI job, and service account is an independently governed principal. A trustworthy system derives its runtime identity from attested workload state, issues only short-lived and narrowly bound credentials, attenuates delegated authority at every hop, and can prove ownership, use, rotation, revocation, and decommissioning from independent evidence.",
     "readme": "curriculum/advanced/24-mcp-identity-non-human-identity-governance/README.md",
     "lab": "curriculum/advanced/24-mcp-identity-non-human-identity-governance/lab.py",
     "notebook": "curriculum/advanced/24-mcp-identity-non-human-identity-governance/nonhuman_identity.ipynb"
