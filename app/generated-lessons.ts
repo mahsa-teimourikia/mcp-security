@@ -247,7 +247,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "25",
     "title": "MCP Security Governance and Risk Management",
-    "summary": "Translate MCP threats into owned risks; connect controls to tests, telemetry, incidents, and evidence; operate exceptions and residual-risk decisions; and establish review triggers for system, vendor, model, capability, identity, and deployment changes.",
+    "summary": "Governance is the system that turns MCP security claims into accountable, versioned decisions. A defensible program states what may go wrong and why it matters, assigns owners, verifies controls against current scoped evidence, applies explicit risk appetite and tolerance, authorizes treatment or a bounded control exception, triggers reassessment after material change, and reports the portfolio without converting ordinal judgments into false precision.",
     "readme": "curriculum/advanced/25-mcp-security-governance-risk-management/README.md",
     "lab": "curriculum/advanced/25-mcp-security-governance-risk-management/lab.py",
     "notebook": "curriculum/advanced/25-mcp-security-governance-risk-management/governance_risk.ipynb"
