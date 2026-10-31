@@ -257,7 +257,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "26",
     "title": "MCP Supply-Chain Risk Management",
-    "summary": "Manage server, SDK, connector, model, package, registry, build, and vendor risk as a portfolio; tier suppliers by impact; require provenance/SBOM/vulnerability evidence and accountable ownership; and define onboarding, monitoring, exception, revocation, and offboarding decisions.",
+    "summary": "An enterprise must govern the entire path by which MCP software, services, models, connectors, registries, build systems, and suppliers acquire authority. A defensible program inventories every dependency and trust edge, verifies supplier and artifact claims against exact current evidence, makes a bounded admission decision, detects material change, and can quarantine or offboard the dependency without confusing provenance with safety.",
     "readme": "curriculum/advanced/26-mcp-supply-chain-risk-management/README.md",
     "lab": "curriculum/advanced/26-mcp-supply-chain-risk-management/lab.py",
     "notebook": "curriculum/advanced/26-mcp-supply-chain-risk-management/supply_chain_risk.ipynb"
