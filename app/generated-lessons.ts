@@ -227,7 +227,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "23",
     "title": "Enterprise MCP Security Architecture",
-    "summary": "Design a platform architecture with distinct registry, identity, authorization, isolation, observability, revocation, and tenant-boundary controls; assign owners; and review cross-plane failure and bypass paths.",
+    "summary": "An architecture diagram is a hypothesis, not a security result. A defensible enterprise MCP platform must show that every executable path carries the right identity, tenant, audience, purpose, policy, artifact, isolation, telemetry, revocation, and ownership evidence—and that the system behaves safely when a control plane is stale, unavailable, or compromised.",
     "readme": "curriculum/advanced/23-enterprise-mcp-security-architecture/README.md",
     "lab": "curriculum/advanced/23-enterprise-mcp-security-architecture/lab.py",
     "notebook": "curriculum/advanced/23-enterprise-mcp-security-architecture/enterprise_architecture.ipynb"
