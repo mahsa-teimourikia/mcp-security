@@ -217,7 +217,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "22",
     "title": "Recovery, Revocation, Rollback, and Resilience",
-    "summary": "Recover an MCP service to verified known-good bytes; propagate revocation across registry, host cache, sessions, credentials, and network; distinguish rollback from root-cause eradication; and test resilience under partial failure.",
+    "summary": "Recovery is not “deploy the previous version” and it is not complete when an API returns success. A defensible MCP recovery accepts a verified containment handoff, converges revocation across every authority path, selects a provenance-backed and compatible candidate, stages it exactly once, validates security and useful service from independent evidence, separately authorizes return to service, and reopens the incident if residual access or adversary re-entry appears.",
     "readme": "curriculum/advanced/22-recovery-revocation-rollback-resilience/README.md",
     "lab": "curriculum/advanced/22-recovery-revocation-rollback-resilience/lab.py",
     "notebook": "curriculum/advanced/22-recovery-revocation-rollback-resilience/recovery_resilience.ipynb"
