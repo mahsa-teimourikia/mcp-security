@@ -293,9 +293,9 @@ network access, and generated artifacts before introducing sensitive fixtures.
 From the repository root:
 
 ```bash
-uv sync --extra contributor
-uv run python curriculum/advanced/15-mcp-red-teaming-adversarial-evaluation/lab.py
-uv run pytest tests/test_course_15_red_teaming.py -q
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/15-mcp-red-teaming-adversarial-evaluation/lab.py
+uv run --frozen pytest tests/test_course_15_red_teaming.py -q
 ```
 
 The lab provides:

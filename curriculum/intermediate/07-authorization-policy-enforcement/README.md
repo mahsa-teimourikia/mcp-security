@@ -324,9 +324,9 @@ policy/model ID in decisions, not merely “latest.”
 From the repository root:
 
 ```bash
-python -m pip install -e '.[contributor]'
-python curriculum/intermediate/07-authorization-policy-enforcement/lab.py
-python -m pytest -q tests/test_course_07_authorization_policy.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/intermediate/07-authorization-policy-enforcement/lab.py
+uv run --frozen pytest -q tests/test_course_07_authorization_policy.py
 ```
 
 Expected result:

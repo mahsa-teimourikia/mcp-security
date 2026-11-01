@@ -25,10 +25,13 @@ for (const [track, level] of Object.entries(trackNames)) {
   for (const entry of entries) {
     const topicDir = resolve(trackDir, entry.name);
     const files = await readdir(topicDir);
-    const notebook = files.find((name) => name.endsWith(".ipynb"));
-    if (!notebook || !files.includes("README.md") || !files.includes("lab.py")) {
+    const notebooks = files.filter(
+      (name) => name.endsWith(".ipynb") && !/ \d+\.ipynb$/.test(name),
+    );
+    if (notebooks.length !== 1 || !files.includes("README.md") || !files.includes("lab.py")) {
       throw new Error(`Incomplete lesson directory: ${relative(root, topicDir)}`);
     }
+    const [notebook] = notebooks;
     const markdown = await readFile(resolve(topicDir, "README.md"), "utf8");
     const title = markdown.match(/^# (.+)$/m)?.[1];
     if (!title) throw new Error(`Missing H1: ${relative(root, topicDir)}/README.md`);

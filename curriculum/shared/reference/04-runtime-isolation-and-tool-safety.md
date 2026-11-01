@@ -12,4 +12,4 @@ Run local MCP servers with a dedicated identity, read-only mounts, a temporary w
 - Require approval before side effects and make operations idempotent where possible.
 - Treat resources and tool results as untrusted content; delimit them from instructions.
 
-The [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) and [MCP security guidance](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) provide practical control checklists.
+The [OWASP AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html) and [MCP 2026-07-28 security guidance](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) provide practical control checklists.

@@ -32,17 +32,15 @@ and peer-agent messages are inputs. None of them grants authority.
 Create an environment and install the course with contributor tools:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -e '.[contributor]'
+make setup
 ```
 
 Run a lab directly or open its notebook:
 
 ```bash
-python curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/lab.py
-jupyter notebook curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/
+uv run --frozen python curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/lab.py
+uv run --frozen jupyter notebook curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/
 ```
 
-Run the repository checks with `make test`. The web Learning Hub can be
+Run the repository checks with `make check`. The web Learning Hub can be
 started with `make dev` and opened at the local address printed by Vite.

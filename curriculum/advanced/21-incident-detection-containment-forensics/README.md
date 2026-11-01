@@ -371,9 +371,9 @@ STIX modeling deserves care: `Observed Data` represents observed facts, while `S
 From the repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/21-incident-detection-containment-forensics/lab.py
-uv run pytest -q tests/test_course_21_incident_forensics.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/21-incident-detection-containment-forensics/lab.py
+uv run --frozen pytest -q tests/test_course_21_incident_forensics.py
 ```
 
 Expected lab output:
@@ -502,7 +502,7 @@ At the recovery handoff:
 - [Sigma correlation rules specification 2.1.0](https://sigmahq.io/sigma-specification/specification/sigma-correlation-rules-specification.html)
 - [STIX 2.1 OASIS Standard](https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.pdf)
 - [MCP protocol revision 2026-07-28](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
-- [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
+- [MCP 2026-07-28 security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)
 - [MCP Ruby SDK: protocol logging deprecation](https://ruby.sdk.modelcontextprotocol.io/server/logging/)
 - [MCP Go SDK: logging guidance](https://go.sdk.modelcontextprotocol.io/server/)
 - [OWASP Agent Control Standard](https://genai.owasp.org/resource/agent-control-standard-acs/)

@@ -291,8 +291,8 @@ not a drop-in standardized replacement for the child access token in this lab.
 From the repository root:
 
 ```bash
-python -m pip install -r requirements.txt
-python curriculum/intermediate/08-delegation-token-exchange-confused-deputy/lab.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/intermediate/08-delegation-token-exchange-confused-deputy/lab.py
 ```
 
 Expected result:
@@ -332,7 +332,7 @@ Open `delegation_security.ipynb` and run all cells. The notebook:
 From the repository root:
 
 ```bash
-python -m pytest -q tests/test_course_08_delegation_security.py
+uv run --frozen pytest -q tests/test_course_08_delegation_security.py
 ```
 
 The test suite covers valid exchange and at least these denial classes:

@@ -217,8 +217,8 @@ From the repository root:
 
 ```bash
 source .venv/bin/activate
-python curriculum/intermediate/12-supply-chain-provenance-sbom-signing-dependencies/lab.py
-pytest -q tests/test_course_12_supply_chain.py
+uv run --frozen python curriculum/intermediate/12-supply-chain-provenance-sbom-signing-dependencies/lab.py
+uv run --frozen pytest -q tests/test_course_12_supply_chain.py
 ```
 
 The demonstration performs four observable paths:

@@ -407,7 +407,7 @@ explicit safe keys plus a documented platform-injected key on macOS.
 From the repository root:
 
 ```bash
-python curriculum/intermediate/09-runtime-isolation-sandboxing/lab.py
+uv run --frozen python curriculum/intermediate/09-runtime-isolation-sandboxing/lab.py
 ```
 
 Expected result:
@@ -448,7 +448,7 @@ Open `runtime_isolation.ipynb` and run all cells. You will:
 ### 3. Run focused tests
 
 ```bash
-python -m pytest -q tests/test_course_09_runtime_isolation.py
+uv run --frozen pytest -q tests/test_course_09_runtime_isolation.py
 ```
 
 The focused suite covers positive, negative, boundary, and dependency-failure

@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 import subprocess
 
 
@@ -21,7 +22,10 @@ def test_each_topic_is_a_complete_vertical_slice():
                 continue
             assert (topic / "README.md").is_file(), topic
             assert (topic / "lab.py").is_file(), topic
-            notebooks = list(topic.glob("*.ipynb"))
+            notebooks = [
+                path for path in topic.glob("*.ipynb")
+                if not re.search(r" \d+\.ipynb$", path.name)
+            ]
             assert len(notebooks) == 1, (topic, notebooks)
 
 
@@ -34,3 +38,15 @@ def test_no_generated_python_caches_are_committed():
         text=True,
     ).stdout.strip()
     assert not tracked
+
+
+def test_no_numbered_backup_files_are_committed():
+    tracked = subprocess.run(
+        ["git", "ls-files"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.splitlines()
+    backups = [path for path in tracked if re.search(r" \d+\.[^/]+$", path)]
+    assert not backups, backups

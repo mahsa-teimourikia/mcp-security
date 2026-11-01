@@ -2,7 +2,7 @@
 
 Authenticate A2A peers, attenuate human authority into a task-bound grant, enforce it independently at every hop, and evaluate replay, tenant, lifecycle, retry, notification, and outcome failures without treating an agent identity or protocol field as authorization.
 
-> **Version snapshot (verified 2026-10-25):** this course targets the stable A2A 1.0 specification family and the official Python SDK 1.2.3. A2A is evolving; pin the protocol version, SDK range, bindings, and extensions you test. Re-run compatibility and security tests before upgrading.
+> **Version snapshot (verified 2026-10-31):** this course targets the stable A2A 1.0 specification family and the official Python SDK 1.3.0. A2A is evolving; pin the protocol version, SDK range, bindings, and extensions you test. Re-run compatibility and security tests before upgrading.
 
 ## Learning objectives
 
@@ -22,9 +22,9 @@ After completing the chapter and lab, you can:
 Complete Courses 6–8 for OAuth and delegation, Course 10 for SSRF/egress, and Course 17 for registry trust. From the repository root:
 
 ```bash
-uv sync --extra contributor
-uv run --extra contributor python curriculum/advanced/18-agent-to-agent-a2a-security-delegation/lab.py
-uv run --extra contributor pytest -q tests/test_course_18_a2a_security.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/18-agent-to-agent-a2a-security-delegation/lab.py
+uv run --frozen pytest -q tests/test_course_18_a2a_security.py
 ```
 
 The lab is deterministic, offline, and credential-free. It uses the official `a2a-sdk` types and PyJWT. Its HMAC keys, static DNS answers, and in-memory stores are training fixtures—not production controls.
@@ -269,7 +269,7 @@ The fixture does not implement network transport, TLS, DNS, JOSE key distributio
 - [A2A protocol specification 1.0.1](https://a2a-protocol.org/v1.0.1/specification/)
 - [A2A security considerations](https://a2a-protocol.org/v1.0.1/specification/#13-security-considerations)
 - [A2A agent discovery and card protection](https://a2a-protocol.org/latest/topics/agent-discovery/)
-- [Official A2A Python SDK 1.2.3](https://github.com/a2aproject/a2a-python/releases/tag/v1.2.3)
+- [Official A2A Python SDK 1.3.0](https://github.com/a2aproject/a2a-python/releases/tag/v1.3.0)
 - [OAuth 2.0 Token Exchange — RFC 8693](https://www.rfc-editor.org/rfc/rfc8693)
 - [OAuth 2.0 Resource Indicators — RFC 8707](https://www.rfc-editor.org/rfc/rfc8707)
 - [OAuth 2.0 Mutual TLS — RFC 8705](https://www.rfc-editor.org/rfc/rfc8705)

@@ -469,9 +469,9 @@ attestation signatures, or unnecessary personal data.
 From the repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/24-mcp-identity-non-human-identity-governance/lab.py
-uv run pytest -q tests/test_course_24_nonhuman_identity.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/24-mcp-identity-non-human-identity-governance/lab.py
+uv run --frozen pytest -q tests/test_course_24_nonhuman_identity.py
 ```
 
 The scenario performs these steps:

@@ -3,6 +3,7 @@
 .env.*
 !.env.example
 .ipynb_checkpoints/
+.hypothesis/
 .pytest_cache/
 .venv/
 __pycache__/

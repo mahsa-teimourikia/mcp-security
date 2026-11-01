@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 
@@ -6,7 +7,10 @@ def main():
     root=Path(__file__).parents[1]
     files=[]
     for track in ('beginner', 'intermediate', 'advanced'):
-        files.extend(sorted((root/'curriculum'/track).glob('*/*.ipynb')))
+        files.extend(
+            path for path in sorted((root/'curriculum'/track).glob('*/*.ipynb'))
+            if not re.search(r' \d+\.ipynb$', path.name)
+        )
     assert files, 'no notebooks found'
     for p in files:
         d=json.loads(p.read_text()); assert d.get('nbformat')==4 and d.get('cells'), f'invalid notebook: {p}'

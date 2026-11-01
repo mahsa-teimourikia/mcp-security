@@ -36,4 +36,4 @@ Use STRIDE or attack trees to record threats, controls, tests, and residual risk
 4. Credentials are short-lived, scoped, and never forwarded to a different resource.
 5. A server can be disabled and rolled back without redeploying the host.
 
-Read the [MCP specification](https://modelcontextprotocol.io/specification/latest) and [official security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices).
+Read the [MCP 2026-07-28 specification](https://modelcontextprotocol.io/specification/2026-07-28) and [official security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices).

@@ -455,9 +455,9 @@ A tool's successful command exit is evidence that the command returned success. 
 From the repository root:
 
 ~~~bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/22-recovery-revocation-rollback-resilience/lab.py
-uv run pytest -q tests/test_course_22_recovery_resilience.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/22-recovery-revocation-rollback-resilience/lab.py
+uv run --frozen pytest -q tests/test_course_22_recovery_resilience.py
 ~~~
 
 Expected output:

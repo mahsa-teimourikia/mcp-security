@@ -15,7 +15,7 @@ end-to-end protocol tests.
 
 After this course, you can:
 
-1. create and run an `MCPServer` using the official Python SDK v2.2 and the
+1. create and run an `MCPServer` using the official Python SDK v2.3 and the
    final MCP `2026-07-28` protocol;
 2. register tools, resources, and prompts and inspect exactly what a client
    discovers;
@@ -80,10 +80,12 @@ multi-tenant design.
 
 ## Current protocol and SDK baseline
 
-The repository pins `mcp>=2.2,<2.3`. Version 2.2 is the current stable Python
+The repository pins `mcp>=2.3,<2.4`. Version 2.3 is the current stable Python
 SDK line and implements MCP `2026-07-28`. The pin matters because this lesson
 uses the SDK's middleware interface, currently documented as provisional within
-the v2 minor line.
+the v2 minor line. Version 2.3 also changed header-parameter schema lookup and
+legacy `experimental` capability serialization, so the protocol regression
+tests are part of the upgrade boundary rather than optional examples.
 
 MCP `2026-07-28` is stateless at the protocol core. Every request carries its
 own protocol/client metadata; a server must not infer authorization from a
@@ -100,7 +102,7 @@ integration, and stderr/OpenTelemetry respectively.
 | Middleware | Observe or refuse raw inbound requests before high-level dispatch | Reject undeclared/missing tool fields |
 | Low-level `Server` | Exact hand-written schemas/results and custom handlers | Use when the high-level layer cannot express a required contract |
 
-The high-level SDK v2.2 validates declared argument types and constraints but
+The high-level SDK v2.3 validates declared argument types and constraints but
 its generated top-level argument model does not advertise or enforce
 `additionalProperties: false`. The lab therefore maintains an exact
 tool-to-field map in middleware and proves an extra field never reaches the
@@ -226,14 +228,14 @@ guide presentation; it cannot authorize a tool or alter deployment policy.
 The lab defaults to a safe self-test instead of blocking on stdio:
 
 ```bash
-python3 -m pip install -e '.[contributor]'
-python3 curriculum/beginner/04-minimal-secure-mcp-server/lab.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/beginner/04-minimal-secure-mcp-server/lab.py
 ```
 
 Start stdio only when an MCP host or Inspector will own the pipe:
 
 ```bash
-python3 curriculum/beginner/04-minimal-secure-mcp-server/lab.py serve
+uv run --frozen python curriculum/beginner/04-minimal-secure-mcp-server/lab.py serve
 ```
 
 Or inspect the exported `mcp` object with the official development CLI:
@@ -321,7 +323,7 @@ it does not pretend to demonstrate idempotency or recovery.
 | MCP Inspector / `mcp dev` | Manual discovery, schema, and negative calls | Manual success is not regression evidence |
 | Pydantic v2 | Runtime constraints and output schemas | Typed data is not authenticated or authorized |
 | JSON Schema Draft 2020-12 | Cross-language contract exchange | Semantic policy remains separate; bound validation cost |
-| SDK middleware | Cross-cutting request validation/observation | Python SDK v2.2 interface is provisional; pin and test |
+| SDK middleware | Cross-cutting request validation/observation | Python SDK v2.3 interface is provisional; pin and test |
 | Low-level SDK `Server` | Exact schemas/results or custom protocol behavior | You must validate arguments and construct errors/results yourself |
 | pytest + in-memory client | Fast deterministic protocol regression suite | Does not prove process/network deployment controls |
 | OpenTelemetry | Protocol and handler correlation | Redact data and add policy/effect semantics |

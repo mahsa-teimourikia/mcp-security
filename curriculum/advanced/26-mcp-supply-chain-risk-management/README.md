@@ -345,9 +345,9 @@ state transitions, external effects, verification, and audit.
 From the repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/26-mcp-supply-chain-risk-management/lab.py
-uv run pytest -q tests/test_course_26_supply_chain_risk.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/26-mcp-supply-chain-risk-management/lab.py
+uv run --frozen pytest -q tests/test_course_26_supply_chain_risk.py
 ```
 
 The scenario registers a critical supplier and rooted server/SDK graph; creates

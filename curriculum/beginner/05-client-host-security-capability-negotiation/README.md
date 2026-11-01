@@ -253,13 +253,13 @@ a second read on the already-open connection and invalidates its cache.
 Run the lab:
 
 ```bash
-python curriculum/beginner/05-client-host-security-capability-negotiation/lab.py
+uv run --frozen python curriculum/beginner/05-client-host-security-capability-negotiation/lab.py
 ```
 
 Run its focused proofs:
 
 ```bash
-python -m pytest -q tests/test_course_05_client_host_security.py
+uv run --frozen pytest -q tests/test_course_05_client_host_security.py
 ```
 
 ## Claim-to-proof map

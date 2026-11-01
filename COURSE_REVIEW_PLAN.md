@@ -120,3 +120,18 @@ For each course, the implementation change should record:
 All 30 vertical slices have completed the systematic review. The next work is
 evidence-driven maintenance and deeper optional production integrations listed
 in the [roadmap](ROADMAP.md).
+
+### Repository maintenance review — 2026-10-31
+
+- Rechecked the published protocol and SDK baseline against MCP `2026-07-28`,
+  MCP Python SDK 2.3.0, A2A 1.0, and A2A Python SDK 1.3.0.
+- Upgraded and re-locked Python and Learning Hub dependencies; added OSV/npm
+  audit gates and weekly dependency maintenance.
+- Updated the primary Python/Node baselines, immutable action pins, Pages
+  actions, minimum-Python compatibility job, workflow timeouts, and
+  cancellation semantics.
+- Bound every quiz item to a course and changed the Hub checkpoint path to the
+  selected course instead of the entire assessment bank.
+- Rechecked repository guidance, source links, generated lesson validation,
+  security reporting, and pull-request expectations against the executable
+  workflow.

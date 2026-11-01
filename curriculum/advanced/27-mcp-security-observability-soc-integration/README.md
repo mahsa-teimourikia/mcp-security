@@ -52,9 +52,9 @@ events, Python dataclasses, and basic incident-response vocabulary. From the
 repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/27-mcp-security-observability-soc-integration/lab.py
-uv run pytest -q tests/test_course_27_soc_integration.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/27-mcp-security-observability-soc-integration/lab.py
+uv run --frozen pytest -q tests/test_course_27_soc_integration.py
 ```
 
 The lab is offline and credential-free. It uses the common `cryptography`

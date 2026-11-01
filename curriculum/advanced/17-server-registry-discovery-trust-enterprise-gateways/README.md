@@ -480,9 +480,9 @@ account, production registry, or real credential is contacted.
 From the repository root:
 
 ```bash
-uv sync --extra contributor
-uv run python curriculum/advanced/17-server-registry-discovery-trust-enterprise-gateways/lab.py
-uv run pytest -q tests/test_course_17_registry_gateway.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/17-server-registry-discovery-trust-enterprise-gateways/lab.py
+uv run --frozen pytest -q tests/test_course_17_registry_gateway.py
 ```
 
 The code demonstrates:
@@ -653,7 +653,7 @@ case coverage, versions, environment, budgets, failures, and uncertainty.
 - [MCP 2026-07-28 release and protocol changes](https://blog.modelcontextprotocol.io/posts/2026-07-28/)
 - [MCP specification: architecture](https://modelcontextprotocol.io/specification/2026-07-28/architecture)
 - [MCP specification: authorization](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)
-- [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
+- [MCP 2026-07-28 security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)
 - [Enterprise-Managed Authorization](https://blog.modelcontextprotocol.io/posts/enterprise-managed-auth/)
 - [Official MCP Registry documentation](https://github.com/modelcontextprotocol/registry/tree/main/docs)
 - [Official Registry API](https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/official-registry-api.md)

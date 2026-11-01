@@ -27,3 +27,11 @@ Keep changes focused and explain validation performed. Prefer protocol
 specifications, standards, official documentation, and primary research.
 Never commit credentials, raw access tokens, customer data, notebook caches,
 or generated dependency folders.
+
+Install the locked Python and JavaScript environments with `make setup`, then
+run `make check` before opening a pull request. `make check` validates the lock,
+compiles the Python surface, runs the full test suite and all credential-free
+labs, validates local links and notebook structure, builds and smoke-tests the
+Learning Hub and quiz, and executes every canonical notebook. Run `make audit`
+when dependencies change. Commit both lockfiles and the generated lesson
+registry when their sources change.

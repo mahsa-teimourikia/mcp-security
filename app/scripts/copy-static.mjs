@@ -4,7 +4,10 @@ await mkdir("../out/quiz", { recursive: true });
 await mkdir("../out/assets", { recursive: true });
 await cp("../quiz", "../out/quiz", {
   recursive: true,
-  filter: (source) => !source.includes("node_modules") && !source.endsWith("package-lock.json"),
+  filter: (source) =>
+    !source.includes("node_modules") &&
+    !source.endsWith("package-lock.json") &&
+    !/ \d+\.[^/]+$/.test(source),
 });
 await cp("../assets/one-plus-i.png", "../out/assets/one-plus-i.png");
 await cp("../assets/one-plus-i-light.png", "../out/assets/one-plus-i-light.png");

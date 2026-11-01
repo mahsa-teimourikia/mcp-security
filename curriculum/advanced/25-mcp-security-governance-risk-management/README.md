@@ -471,9 +471,9 @@ at the technical boundary; integrate summaries into governance.
 From the repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/25-mcp-security-governance-risk-management/lab.py
-uv run pytest -q tests/test_course_25_governance_risk.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/25-mcp-security-governance-risk-management/lab.py
+uv run --frozen pytest -q tests/test_course_25_governance_risk.py
 ```
 
 The scenario performs these steps:

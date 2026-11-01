@@ -11,10 +11,16 @@
     <header>
       <a class="brand" href="../"><img src="../assets/one-plus-i.png" alt="One+i" /> Back to Learning Hub</a>
       <p class="eyebrow">Architecture judgment · failure analysis · controls</p>
-      <h1>MCP Security<br /><em>Knowledge Check</em></h1>
-      <p>Answer every question, submit once, then use the explanations to choose what to revisit.</p>
+      <h1>MCP Security<br /><em id="quiz-title">Knowledge Check</em></h1>
+      <p id="quiz-intro">Choose a course checkpoint or take the comprehensive assessment, then use the explanations to choose what to revisit.</p>
     </header>
     <main>
+      <div class="quiz-mode">
+        <label for="course-select">Assessment scope</label>
+        <select id="course-select">
+          <option value="">All 30 courses</option>
+        </select>
+      </div>
       <div class="quiz-meta"><span id="progress">0 answered</span><span id="question-count"></span></div>
       <form id="quiz"></form>
       <div class="actions">

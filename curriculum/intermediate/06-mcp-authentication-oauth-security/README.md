@@ -224,9 +224,9 @@ decision in your trusted application.
 From the repository root:
 
 ```bash
-python -m pip install -e '.[contributor]'
-python curriculum/intermediate/06-mcp-authentication-oauth-security/lab.py
-python -m pytest -q tests/test_course_06_oauth_security.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/intermediate/06-mcp-authentication-oauth-security/lab.py
+uv run --frozen pytest -q tests/test_course_06_oauth_security.py
 ```
 
 Expected result:
