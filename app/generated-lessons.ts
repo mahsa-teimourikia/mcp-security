@@ -287,7 +287,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "29",
     "title": "MCP Security Architecture Review Workshop",
-    "summary": "Conduct a structured review of an MCP platform or integration; trace design claims to threat model, identity, policy, provenance, isolation, telemetry, recovery, owner, and test evidence; and produce prioritized remediation with explicit residual risk.",
+    "summary": "A security architecture review is a versioned engineering decision about a specific system, environment, and change. It must connect representations of components, trust zones, data, identities, authority, and effects to current evidence and executable abuse cases. A diagram, checklist percentage, model opinion, signed artifact, or passing happy-path test is not enough.",
     "readme": "curriculum/advanced/29-mcp-security-architecture-review-workshop/README.md",
     "lab": "curriculum/advanced/29-mcp-security-architecture-review-workshop/lab.py",
     "notebook": "curriculum/advanced/29-mcp-security-architecture-review-workshop/architecture_review.ipynb"
