@@ -41,6 +41,9 @@ canonical notebook.
 - 27 — MCP security observability and SOC integration
 - 28 — MCP threat hunting and runtime anomaly detection
 - 29 — MCP security architecture review workshop
+- 30 — Integrated secure MCP platform capstone
 
-The integrated secure-platform capstone remains on the [roadmap](ROADMAP.md)
-until it meets the same chapter, lab, notebook, test, and checkpoint standard.
+Course 30 integrates the recurring tenant-support scenario across signed
+release, runtime authorization, idempotent effects, observability, containment,
+recovery, and reauthorization. Ongoing improvements are tracked in the
+[roadmap](ROADMAP.md).

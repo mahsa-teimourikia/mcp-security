@@ -10,5 +10,5 @@ if (paths.length === 0) throw new Error("No generated lesson links found.");
 for (const path of new Set(paths)) await access(resolve(root, path));
 
 const lessonCount = (generated.match(/"id":/g) ?? []).length;
-if (lessonCount !== 29) throw new Error(`Expected 29 lessons, found ${lessonCount}.`);
+if (lessonCount !== 30) throw new Error(`Expected 30 lessons, found ${lessonCount}.`);
 console.log(`Validated ${paths.length} lesson resources across ${lessonCount} lessons.`);

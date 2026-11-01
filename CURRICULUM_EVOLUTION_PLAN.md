@@ -74,7 +74,7 @@ curriculum/
   beginner/04-minimal-secure-mcp-server/
   beginner/05-client-host-security-capability-negotiation/
   intermediate/06-mcp-authentication-oauth-security/ ... 13-secure-mcp-cicd-release-gates/
-  advanced/14-mcp-security-testing-fuzzing/ ... 29-mcp-security-architecture-review-workshop/
+  advanced/14-mcp-security-testing-fuzzing/ ... 30-integrated-secure-mcp-platform-capstone/
   shared/fixtures/
 app/
 quiz/
