@@ -277,7 +277,7 @@ export const lessons: Lesson[] = [
     "level": "Advanced",
     "step": "28",
     "title": "MCP Threat Hunting and Runtime Anomaly Detection",
-    "summary": "Form evidence-based MCP hunt hypotheses; query normalized traces for unexpected artifact, capability, identity, tenant, destination, approval, and denial patterns; distinguish a signal from a verdict; and route findings to triage, containment, and regression tests.",
+    "summary": "Threat hunting is a scoped, hypothesis-led investigation of available evidence to discover behavior that existing controls or detections may have missed. Runtime anomaly detection ranks observations that differ from a defined baseline. Neither activity proves maliciousness, grants authority, or permits containment.",
     "readme": "curriculum/advanced/28-mcp-threat-hunting-runtime-anomaly-detection/README.md",
     "lab": "curriculum/advanced/28-mcp-threat-hunting-runtime-anomaly-detection/lab.py",
     "notebook": "curriculum/advanced/28-mcp-threat-hunting-runtime-anomaly-detection/threat_hunting.ipynb"
