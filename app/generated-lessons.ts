@@ -291,5 +291,15 @@ export const lessons: Lesson[] = [
     "readme": "curriculum/advanced/29-mcp-security-architecture-review-workshop/README.md",
     "lab": "curriculum/advanced/29-mcp-security-architecture-review-workshop/lab.py",
     "notebook": "curriculum/advanced/29-mcp-security-architecture-review-workshop/architecture_review.ipynb"
+  },
+  {
+    "id": "advanced-30",
+    "level": "Advanced",
+    "step": "30",
+    "title": "Integrated Secure MCP Platform Capstone",
+    "summary": "This capstone assembles the course's tenant-scoped support scenario into one operable system. You will take an exact MCP server artifact from a signed build through release, activation, tool use, an uncertain side effect, detection, containment, recovery, and reauthorization. Every claim is tied to executable code, negative tests, and observable evidence.",
+    "readme": "curriculum/advanced/30-integrated-secure-mcp-platform-capstone/README.md",
+    "lab": "curriculum/advanced/30-integrated-secure-mcp-platform-capstone/lab.py",
+    "notebook": "curriculum/advanced/30-integrated-secure-mcp-platform-capstone/secure_platform_capstone.ipynb"
   }
 ];

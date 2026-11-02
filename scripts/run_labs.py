@@ -12,8 +12,8 @@ def main() -> None:
     labs = []
     for track in ("beginner", "intermediate", "advanced"):
         labs.extend(sorted((ROOT / "curriculum" / track).glob("*/lab.py")))
-    if len(labs) != 29:
-        raise SystemExit(f"expected 29 canonical labs, found {len(labs)}")
+    if len(labs) != 30:
+        raise SystemExit(f"expected 30 canonical labs, found {len(labs)}")
 
     failures = []
     for lab in labs:

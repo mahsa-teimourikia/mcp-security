@@ -1,6 +1,6 @@
 # Course-by-course review and improvement plan
 
-This tracker governs the systematic review of all 29 published courses. Work is
+This tracker governs the systematic review of all 30 published courses. Work is
 performed one vertical slice at a time so a course is not marked complete when
 only its prose, lab, notebook, quiz, or tests have improved.
 
@@ -39,33 +39,34 @@ system instead of introducing disconnected toy examples.
 | ---: | --- | --- | --- |
 | 01 | Architecture, protocol eras, trust boundaries | MCP spec 2026-07-28, Python SDK v2, Inspector v2, modern/legacy interoperability | Complete (2026-09-20) |
 | 02 | Threat modeling | STRIDE, attack trees, data-flow diagrams, MITRE ATLAS/OWASP mappings | Complete (2026-09-20) |
-| 03 | Secure tools/resources/prompts | JSON Schema, typed validation, annotations, output validation, contract tests | Next |
-| 04 | Minimal secure server | Official Python SDK server, stdio, structured outputs, errors, Inspector | Queued |
-| 05 | Client/host security | Official client, capability risk gates, origin/redirect controls, caches | Queued |
-| 06 | Authentication and OAuth | MCP authorization spec, OAuth 2.1, protected-resource metadata, PKCE | Queued |
-| 07 | Authorization and policy | RBAC/ABAC/ReBAC, OPA/Cedar comparison, deny-by-default enforcement | Queued |
-| 08 | Delegation/confused deputy | RFC 8693 token exchange, audience/scope narrowing, delegation chains | Queued |
-| 09 | Isolation and sandboxing | Containers, seccomp, namespaces, gVisor/Firecracker trade-offs | Queued |
-| 10 | Filesystem/network/SSRF | Path containment, DNS/IP validation, egress proxies, metadata blocking | Queued |
-| 11 | Injection and tool poisoning | OWASP guidance, taint/provenance, instruction/data separation, evals | Queued |
-| 12 | Provenance/SBOM/signing | SLSA, SPDX/CycloneDX, Sigstore, dependency/vulnerability scanners | Queued |
-| 13 | Secure CI/CD | GitHub Actions, pinned actions, attestations, policy gates, rollback | Queued |
-| 14 | Testing and fuzzing | pytest, Hypothesis, schema/property tests, protocol conformance | Queued |
-| 15 | Red teaming/evaluation | Threat-led test design, reproducible attack cases, scoring and gates | Queued |
-| 16 | Runtime assurance | OpenTelemetry, traces/metrics/logs, SLOs, drift and behavioral controls | Queued |
-| 17 | Registry/gateway trust | Official Registry, manifests, onboarding, policy proxies, revocation | Queued |
-| 18 | A2A security | Current A2A specification/SDKs, agent cards, identity and delegation | Queued |
-| 19 | Protocol composition | MCP+A2A trust translation, identity/context loss, end-to-end invariants | Queued |
-| 20 | Multi-agent attack paths | Graph analysis, cross-server propagation, least-authority orchestration | Queued |
-| 21 | Detection/containment/forensics | Evidence schema, kill switches, timelines, preservation and scoping | Queued |
-| 22 | Recovery/revocation/resilience | Credential/artifact revocation, rollback, replay, chaos exercises | Queued |
-| 23 | Enterprise architecture | Zones, gateways, identity, data controls, deployment reference design | Queued |
-| 24 | Non-human identity | Workload identity, SPIFFE/SPIRE, secretless auth, lifecycle governance | Queued |
-| 25 | Governance/risk | NIST AI RMF/CSF, ISO mappings, risk acceptance, ownership and metrics | Queued |
-| 26 | Supply-chain risk management | Portfolio inventory, VEX, continuous assurance, supplier response | Queued |
-| 27 | SOC integration | OTel/SIEM normalization, detection engineering, runbooks, case evidence | Queued |
-| 28 | Threat hunting/anomaly detection | Hypothesis-led hunts, baselines, graph/sequence signals, false positives | Queued |
-| 29 | Architecture review workshop | Evidence-backed design review, abuse cases, findings, remediation plan | Queued |
+| 03 | Secure tools/resources/prompts | JSON Schema, typed validation, annotations, output validation, contract tests | Complete (2026-10-31) |
+| 04 | Minimal secure server | Official Python SDK server, stdio, structured outputs, errors, Inspector | Complete (2026-10-31) |
+| 05 | Client/host security | Official client, capability risk gates, origin/redirect controls, caches | Complete (2026-10-31) |
+| 06 | Authentication and OAuth | MCP authorization spec, OAuth 2.1, protected-resource metadata, PKCE | Complete (2026-10-31) |
+| 07 | Authorization and policy | RBAC/ABAC/ReBAC, OPA/Cedar comparison, deny-by-default enforcement | Complete (2026-10-31) |
+| 08 | Delegation/confused deputy | RFC 8693 token exchange, audience/scope narrowing, delegation chains | Complete (2026-10-31) |
+| 09 | Isolation and sandboxing | Containers, seccomp, namespaces, gVisor/Firecracker trade-offs | Complete (2026-10-31) |
+| 10 | Filesystem/network/SSRF | Path containment, DNS/IP validation, egress proxies, metadata blocking | Complete (2026-10-31) |
+| 11 | Injection and tool poisoning | OWASP guidance, taint/provenance, instruction/data separation, evals | Complete (2026-10-31) |
+| 12 | Provenance/SBOM/signing | SLSA, SPDX/CycloneDX, Sigstore, dependency/vulnerability scanners | Complete (2026-10-31) |
+| 13 | Secure CI/CD | GitHub Actions, pinned actions, attestations, policy gates, rollback | Complete (2026-10-31) |
+| 14 | Testing and fuzzing | pytest, Hypothesis, schema/property tests, protocol conformance | Complete (2026-10-31) |
+| 15 | Red teaming/evaluation | Threat-led test design, reproducible attack cases, scoring and gates | Complete (2026-10-31) |
+| 16 | Runtime assurance | OpenTelemetry, traces/metrics/logs, SLOs, drift and behavioral controls | Complete (2026-10-31) |
+| 17 | Registry/gateway trust | Official Registry, manifests, onboarding, policy proxies, revocation | Complete (2026-10-31) |
+| 18 | A2A security | Current A2A specification/SDKs, agent cards, identity and delegation | Complete (2026-10-31) |
+| 19 | Protocol composition | MCP+A2A trust translation, identity/context loss, end-to-end invariants | Complete (2026-10-31) |
+| 20 | Multi-agent attack paths | Graph analysis, cross-server propagation, least-authority orchestration | Complete (2026-10-31) |
+| 21 | Detection/containment/forensics | Evidence schema, kill switches, timelines, preservation and scoping | Complete (2026-10-31) |
+| 22 | Recovery/revocation/resilience | Credential/artifact revocation, rollback, replay, chaos exercises | Complete (2026-10-31) |
+| 23 | Enterprise architecture | Zones, gateways, identity, data controls, deployment reference design | Complete (2026-10-31) |
+| 24 | Non-human identity | Workload identity, SPIFFE/SPIRE, secretless auth, lifecycle governance | Complete (2026-10-31) |
+| 25 | Governance/risk | NIST AI RMF/CSF, ISO mappings, risk acceptance, ownership and metrics | Complete (2026-10-31) |
+| 26 | Supply-chain risk management | Portfolio inventory, VEX, continuous assurance, supplier response | Complete (2026-10-31) |
+| 27 | SOC integration | OTel/SIEM normalization, detection engineering, runbooks, case evidence | Complete (2026-10-31) |
+| 28 | Threat hunting/anomaly detection | Hypothesis-led hunts, baselines, graph/sequence signals, false positives | Complete (2026-10-31) |
+| 29 | Architecture review workshop | Evidence-backed design review, abuse cases, findings, remediation plan | Complete (2026-10-31) |
+| 30 | Integrated secure-platform capstone | Signed release, tenant runtime, uncertain effects, containment, recovery | Complete (2026-10-31) |
 
 ## Delivery waves
 
@@ -75,8 +76,8 @@ system instead of introducing disconnected toy examples.
   isolation, content security, provenance, and release controls.
 - **Wave 3 — assurance (14–22):** testing, red teaming, runtime evidence,
   registry/A2A composition, incident response, and recovery.
-- **Wave 4 — enterprise practice (23–29):** architecture, identity governance,
-  risk, supply chain, SOC, hunting, and the integrated review workshop.
+- **Wave 4 — enterprise practice (23–30):** architecture, identity governance,
+  risk, supply chain, SOC, hunting, review, and the integrated platform capstone.
 
 ## Per-course review record
 
@@ -116,4 +117,6 @@ For each course, the implementation change should record:
   51-file link validation, 87 Learning Hub resources, quiz/smoke tests, the
   production build, and an npm audit with zero vulnerabilities on 2026-09-20.
 
-Course 03 is the next review target.
+All 30 vertical slices have completed the systematic review. The next work is
+evidence-driven maintenance and deeper optional production integrations listed
+in the [roadmap](ROADMAP.md).

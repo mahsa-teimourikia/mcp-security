@@ -21,7 +21,7 @@ The systematic quality review is tracked in the repository's
 | --- | --- |
 | Beginner | 01 Architecture, lifecycle, and trust boundaries · 02 Threat modeling · 03 Secure interfaces · 04 Minimal secure server · 05 Client/host security |
 | Intermediate | 06 Authentication and OAuth · 07 Authorization and policy · 08 Delegation and confused deputy · 09 Isolation · 10 Filesystem/network/SSRF · 11 Injection and untrusted content · 12 Provenance/SBOM/signing · 13 CI/CD release gates |
-| Advanced | 14 Testing and fuzzing · 15 Red teaming · 16 Observability and assurance · 17 Registry and gateway · 18 A2A security · 19 Protocol composition · 20 Cross-server attack paths · 21 Detection and forensics · 22 Recovery and resilience · 23 Enterprise architecture · 24 Non-human identity · 25 Governance and risk · 26 Supply-chain risk · 27 SOC integration · 28 Threat hunting · 29 Architecture review workshop |
+| Advanced | 14 Testing and fuzzing · 15 Red teaming · 16 Observability and assurance · 17 Registry and gateway · 18 A2A security · 19 Protocol composition · 20 Cross-server attack paths · 21 Detection and forensics · 22 Recovery and resilience · 23 Enterprise architecture · 24 Non-human identity · 25 Governance and risk · 26 Supply-chain risk · 27 SOC integration · 28 Threat hunting · 29 Architecture review workshop · 30 Integrated secure-platform capstone |
 
 ## Available now
 
@@ -54,6 +54,4 @@ The systematic quality review is tracked in the repository's
 27. [MCP Security Observability and SOC Integration](advanced/27-mcp-security-observability-soc-integration/README.md) — chapter · [lab](advanced/27-mcp-security-observability-soc-integration/lab.py) · [notebook](advanced/27-mcp-security-observability-soc-integration/soc_integration.ipynb)
 28. [MCP Threat Hunting and Runtime Anomaly Detection](advanced/28-mcp-threat-hunting-runtime-anomaly-detection/README.md) — chapter · [lab](advanced/28-mcp-threat-hunting-runtime-anomaly-detection/lab.py) · [notebook](advanced/28-mcp-threat-hunting-runtime-anomaly-detection/threat_hunting.ipynb)
 29. [MCP Security Architecture Review Workshop](advanced/29-mcp-security-architecture-review-workshop/README.md) — chapter · [lab](advanced/29-mcp-security-architecture-review-workshop/lab.py) · [notebook](advanced/29-mcp-security-architecture-review-workshop/architecture_review.ipynb)
-
-Course 30 remains planned until its integrated capstone meets the same artifact
-and validation gates. See the repository [roadmap](../ROADMAP.md).
+30. [Integrated Secure MCP Platform Capstone](advanced/30-integrated-secure-mcp-platform-capstone/README.md) — chapter · [lab](advanced/30-integrated-secure-mcp-platform-capstone/lab.py) · [notebook](advanced/30-integrated-secure-mcp-platform-capstone/secure_platform_capstone.ipynb)

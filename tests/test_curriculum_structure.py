@@ -3,7 +3,7 @@ import subprocess
 
 
 ROOT = Path(__file__).parents[1]
-TRACKS = {"beginner": 5, "intermediate": 8, "advanced": 16}
+TRACKS = {"beginner": 5, "intermediate": 8, "advanced": 17}
 
 
 def test_canonical_tracks_and_topic_count():
