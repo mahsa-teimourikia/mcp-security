@@ -53,9 +53,9 @@ telemetry, incident evidence, SOC operations, and authorization boundaries.
 From the repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/28-mcp-threat-hunting-runtime-anomaly-detection/lab.py
-uv run pytest -q tests/test_course_28_threat_hunting.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/28-mcp-threat-hunting-runtime-anomaly-detection/lab.py
+uv run --frozen pytest -q tests/test_course_28_threat_hunting.py
 ```
 
 The lab is offline and credential-free. It uses the repository's pinned

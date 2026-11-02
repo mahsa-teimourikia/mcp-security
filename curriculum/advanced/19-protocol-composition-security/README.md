@@ -14,7 +14,7 @@ The runtime proposes. Trusted application code authorizes and executes.
 
 > **Version snapshot (reviewed 2026-10-28):** the lab targets A2A protocol
 > `1.0`, MCP `2026-07-28`, the draft MCP Tasks extension dated `2026-07-28`,
-> `a2a-sdk` 1.x, and MCP Python SDK 2.2.x. Protocol
+> `a2a-sdk` 1.3.x, and MCP Python SDK 2.3.x. Protocol
 > version, SDK version, and product version are different facts. Re-review the
 > linked specifications and compatibility policy before a production upgrade.
 
@@ -326,11 +326,9 @@ simplest topology that satisfies the required ownership and recovery model.
 The lab uses no real credentials or network endpoints. From the repository root:
 
 ```bash
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -e '.[contributor]'
-python curriculum/advanced/19-protocol-composition-security/lab.py
-pytest -q tests/test_course_19_protocol_composition.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/19-protocol-composition-security/lab.py
+uv run --frozen pytest -q tests/test_course_19_protocol_composition.py
 ```
 
 What the lab actually proves:

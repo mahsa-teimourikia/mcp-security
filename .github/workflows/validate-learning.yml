@@ -9,37 +9,64 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: validate-learning-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate-course:
+    name: Course (Python 3.15)
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
         with:
-          python-version: "3.11"
-          cache: pip
+          version: "0.13.6"
+          python-version: "3.15"
+          enable-cache: true
       - name: Install course validation dependencies
-        run: python -m pip install -e '.[contributor]'
+        run: uv sync --locked --extra contributor
+      - name: Audit locked Python dependencies
+        run: uv audit --locked --preview-features audit-command
       - name: Compile course modules
-        run: python -m compileall -q curriculum scripts tests
+        run: uv run --frozen python -m compileall -q curriculum scripts tests
       - name: Validate curriculum, notebooks, and links
         run: |
-          python -m pytest -q
-          python scripts/run_labs.py
-          python scripts/validate_notebooks.py
-          python scripts/execute-notebooks.py --timeout 90
-          python scripts/check_links.py
+          uv run --frozen pytest -q
+          uv run --frozen python scripts/run_labs.py
+          uv run --frozen python scripts/validate_notebooks.py
+          uv run --frozen python scripts/execute-notebooks.py --timeout 90
+          uv run --frozen python scripts/check_links.py
+
+  validate-python-floor:
+    name: Compatibility (Python 3.11)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install uv and Python
+        uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
+        with:
+          version: "0.13.6"
+          python-version: "3.11"
+          enable-cache: true
+      - run: uv sync --locked --extra contributor
+      - run: uv run --frozen pytest -q
 
   validate-site:
+    name: Learning Hub (Node 26 LTS)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
-          node-version: 22
+          node-version: 26.13.0
           cache: npm
           cache-dependency-path: app/package-lock.json
       - run: npm ci
         working-directory: app
-      - run: npm test
+      - run: npm run test:ci
         working-directory: app

@@ -50,9 +50,9 @@ supply-chain security, observability, incident response, and recovery. From the
 repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/30-integrated-secure-mcp-platform-capstone/lab.py
-uv run pytest -q tests/test_course_30_secure_platform_capstone.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/30-integrated-secure-mcp-platform-capstone/lab.py
+uv run --frozen pytest -q tests/test_course_30_secure_platform_capstone.py
 ```
 
 The lab is offline and credential-free. It uses Python dataclasses for explicit

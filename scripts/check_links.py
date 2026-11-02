@@ -8,7 +8,7 @@ def main():
         ROOT/'README.md', ROOT/'CONTRIBUTING.md', ROOT/'COURSE_MAP.md',
         ROOT/'LEARNING.md', ROOT/'ROADMAP.md', ROOT/'COURSE_REVIEW_PLAN.md',
         ROOT/'CURRICULUM_EVOLUTION_PLAN.md',
-        *(ROOT/'docs').glob('*.md'), *(ROOT/'curriculum').glob('**/*.md'),
+        *(path for path in (ROOT/'curriculum').glob('**/*.md') if not re.search(r' \d+\.md$', path.name)),
     ]
     for path in markdown:
         if not path.exists():

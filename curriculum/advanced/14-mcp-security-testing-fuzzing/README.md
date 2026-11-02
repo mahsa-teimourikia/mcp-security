@@ -358,7 +358,7 @@ python3 lab.py
 From the repository root:
 
 ```bash
-pytest -q tests/test_course_14_security_testing.py
+uv run --frozen pytest -q tests/test_course_14_security_testing.py
 ```
 
 The demonstration runs the same ten labelled cases against:

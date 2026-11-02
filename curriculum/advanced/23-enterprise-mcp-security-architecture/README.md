@@ -391,8 +391,8 @@ routes, network state, service discovery, and traces.
 From the repository root:
 
 ```bash
-uv run python curriculum/advanced/23-enterprise-mcp-security-architecture/lab.py
-uv run --extra contributor pytest -q tests/test_course_23_enterprise_architecture.py
+uv run --frozen python curriculum/advanced/23-enterprise-mcp-security-architecture/lab.py
+uv run --frozen pytest -q tests/test_course_23_enterprise_architecture.py
 ```
 
 The lab uses common libraries already pinned by the repository:

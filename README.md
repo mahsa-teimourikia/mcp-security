@@ -56,20 +56,26 @@ for the full progression.
 
 ## Run locally
 
+Install [uv 0.13.6 or newer](https://docs.astral.sh/uv/getting-started/installation/) and a
+supported Node.js LTS release. The repository currently validates Python 3.11
+and 3.15, uses Python 3.15 for the primary toolchain, and deploys the Hub with
+Node.js 26 LTS.
+
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install -e '.[contributor]'
-make test-python
+make setup
+make check
 ```
 
 Launch the Learning Hub:
 
 ```bash
-cd app
-npm ci
-npm run dev
+make dev
 ```
+
+`uv.lock` and `app/package-lock.json` are the reproducibility sources. Use
+`make sync` after pulling dependency changes and `make audit` to query the OSV
+and npm advisory services. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full
+validation contract.
 
 Labs use synthetic data and avoid live side effects by default. Provider or
 platform integrations must be explicitly optional and reuse the same
@@ -79,7 +85,7 @@ validation, authorization, and audit boundaries.
 
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification/latest)
 - [Official MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk)
-- [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
+- [MCP 2026-07-28 security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)
 - [OAuth 2.0 Security Best Current Practice (RFC 9700)](https://www.rfc-editor.org/rfc/rfc9700)
 - [OWASP MCP Top 10](https://owasp.org/www-project-mcp-top-10/)
 - [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
@@ -88,4 +94,5 @@ validation, authorization, and audit boundaries.
 ## Contributing and license
 
 Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) before
-opening a pull request. This repository is licensed under the [MIT License](LICENSE).
+opening a pull request and [SECURITY.md](SECURITY.md) before reporting a
+vulnerability. This repository is licensed under the [MIT License](LICENSE).

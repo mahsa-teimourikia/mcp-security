@@ -62,9 +62,9 @@ authorization, runtime isolation, filesystem controls, and egress boundaries.
 From the repository root:
 
 ```bash
-uv sync --extra contributor
-uv run python curriculum/intermediate/11-prompt-injection-tool-poisoning-untrusted-content/lab.py
-uv run pytest -q tests/test_course_11_untrusted_content.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/intermediate/11-prompt-injection-tool-poisoning-untrusted-content/lab.py
+uv run --frozen pytest -q tests/test_course_11_untrusted_content.py
 ```
 
 The lab uses the real MCP Python SDK in memory. It does not call a live model,

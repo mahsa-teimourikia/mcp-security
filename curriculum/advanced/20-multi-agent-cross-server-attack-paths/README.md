@@ -12,8 +12,9 @@ from currently executable paths, measure sensitive blast radius, select
 containment candidates without treating a graph heuristic as authority, and
 prove containment against current enforcement and independent resource state.
 
-> **Version snapshot (reviewed 2026-10-28):** the course uses NetworkX
-> 3.5–3.x and reviews MCP `2026-07-28`, A2A `1.0.1`, NIST SP 800-207,
+> **Version snapshot (reviewed 2026-10-31):** the course supports NetworkX
+> 3.5–3.7 (the resolver keeps 3.11-compatible releases where required) and
+> reviews MCP `2026-07-28`, A2A `1.0.1`, NIST SP 800-207,
 > MITRE ATT&CK Enterprise lateral movement, and the OWASP Agentic AI Threats
 > and Agent Control Standard resources available on the review date. Protocol,
 > SDK, graph database, and product versions are different facts. Re-check the
@@ -308,20 +309,20 @@ resource ledger for outcomes. One product rarely serves all four roles safely.
 Install the locked contributor environment from the repository root:
 
 ```bash
-uv sync --extra contributor
+uv sync --locked --extra contributor
 ```
 
 Run the canonical lab:
 
 ```bash
-uv run --extra mcp python \
+uv run --frozen python \
   curriculum/advanced/20-multi-agent-cross-server-attack-paths/lab.py
 ```
 
 Run focused tests:
 
 ```bash
-uv run --extra contributor pytest -q tests/test_course_20_attack_paths.py
+uv run --frozen pytest -q tests/test_course_20_attack_paths.py
 ```
 
 Then execute `attack_paths.ipynb` from its course directory. The notebook loads
@@ -433,7 +434,7 @@ flow loss. State which decisions require a human incident commander.
 ### Protocols and identity
 
 - [Model Context Protocol specification (`2026-07-28`)](https://modelcontextprotocol.io/specification/2026-07-28)
-- [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
+- [MCP 2026-07-28 security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)
 - [MCP authorization specification](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)
 - [A2A Protocol specification 1.0.1](https://a2a-protocol.org/v1.0.1/specification/)
 - [A2A multi-tenancy guidance](https://a2a-protocol.org/v1.0.1/topics/multi-tenancy/)

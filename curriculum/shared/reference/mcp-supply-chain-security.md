@@ -20,7 +20,7 @@ flowchart LR
 
 ## MCP trust boundaries
 
-An MCP client should treat a server as an untrusted extension. The server may expose tools, resources, and prompts; the client remains responsible for user consent, authorization, schema validation, output handling, and side-effect approvals. Do not equate a friendly tool description with permission. Require explicit user confirmation for destructive or external-communication actions. The [official MCP security guidance](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices) covers token passthrough, confused deputy, SSRF, session hijacking, and local-server risks.
+An MCP client should treat a server as an untrusted extension. The server may expose tools, resources, and prompts; the client remains responsible for user consent, authorization, schema validation, output handling, and side-effect approvals. Do not equate a friendly tool description with permission. Require explicit user confirmation for destructive or external-communication actions. The [official MCP 2026-07-28 security guidance](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) covers token passthrough, confused deputy, SSRF, state-handle hijacking, and local-server risks.
 
 ## Supply-chain lifecycle
 
@@ -66,7 +66,7 @@ For an implementation-focused comparison, see the [MCP development and security 
 
 ## References and research
 
-- [MCP specification](https://modelcontextprotocol.io/specification/latest), [security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices), and [MCP authorization](https://modelcontextprotocol.io/specification/latest/basic/authorization)
+- [MCP 2026-07-28 specification](https://modelcontextprotocol.io/specification/2026-07-28), [security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices), and [MCP authorization](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization)
 - [OWASP Agentic Security Initiative](https://genai.owasp.org/initiatives/agentic-security-initiative/) and [AI Agent Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html)
 - [SLSA](https://slsa.dev/), [Sigstore](https://www.sigstore.dev/), [Syft](https://github.com/anchore/syft), and [OSV-Scanner](https://google.github.io/osv-scanner/)
 - [AgentDojo](https://arxiv.org/abs/2406.13352), [ToolEmu](https://arxiv.org/abs/2309.15817), [Indirect Prompt Injections](https://arxiv.org/abs/2302.12173), and [garak](https://arxiv.org/abs/2406.11036)

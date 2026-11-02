@@ -163,9 +163,9 @@ server/downstream authorization.
 Install and run from the repository root:
 
 ```bash
-python3 -m pip install -e '.[contributor]'
-python3 curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/lab.py
-python3 -m pytest -q tests/test_course_01_architecture.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/beginner/01-mcp-architecture-lifecycle-trust-boundaries/lab.py
+uv run --frozen pytest -q tests/test_course_01_architecture.py
 ```
 
 Expected evidence includes protocol `2026-07-28`, the server identity, three
@@ -278,5 +278,5 @@ are treated as explicit trade-offs later in the curriculum.
 - [Official MCP TypeScript SDK](https://github.com/modelcontextprotocol/typescript-sdk)
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 - [MCP Inspector CLI and strict schema checks](https://github.com/modelcontextprotocol/inspector/blob/main/clients/cli/README.md)
-- [MCP security best practices](https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices)
+- [MCP 2026-07-28 security best practices](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices)
 - [JSON-RPC 2.0 specification](https://www.jsonrpc.org/specification)

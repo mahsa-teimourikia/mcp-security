@@ -367,9 +367,9 @@ contract.
 From the repository root:
 
 ```bash
-uv sync --extra contributor
-uv run python curriculum/advanced/16-runtime-observability-continuous-assurance/lab.py
-uv run pytest -q tests/test_course_16_runtime_assurance.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/16-runtime-observability-continuous-assurance/lab.py
+uv run --frozen pytest -q tests/test_course_16_runtime_assurance.py
 ```
 
 The lab is credential-free and performs no network export. It includes:

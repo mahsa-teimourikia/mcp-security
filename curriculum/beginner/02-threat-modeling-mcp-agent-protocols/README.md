@@ -209,9 +209,9 @@ The [lab](lab.py) provides:
 Run it from the repository root:
 
 ```bash
-python3 -m pip install -e '.[contributor]'
-python3 curriculum/beginner/02-threat-modeling-mcp-agent-protocols/lab.py
-python3 -m pytest -q tests/test_course_02_threat_modeling.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/beginner/02-threat-modeling-mcp-agent-protocols/lab.py
+uv run --frozen pytest -q tests/test_course_02_threat_modeling.py
 ```
 
 The baseline intentionally reports 100% design traceability and 0% verified

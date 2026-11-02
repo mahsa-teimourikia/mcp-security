@@ -238,9 +238,9 @@ receipts, output validation, fail-closed dispatch, and correlated audit events.
 Run it from the repository root:
 
 ```bash
-python3 -m pip install -e '.[contributor]'
-python3 curriculum/beginner/03-secure-tool-resource-prompt-interfaces/lab.py
-python3 -m pytest -q tests/test_course_03_secure_interfaces.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/beginner/03-secure-tool-resource-prompt-interfaces/lab.py
+uv run --frozen pytest -q tests/test_course_03_secure_interfaces.py
 ```
 
 The demonstration follows normal → vulnerable → attack → defense → retest:

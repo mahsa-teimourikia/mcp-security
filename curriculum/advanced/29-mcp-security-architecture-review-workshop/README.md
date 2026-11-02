@@ -53,9 +53,9 @@ incident, recovery, and threat-hunting courses, or bring equivalent experience.
 From the repository root:
 
 ```bash
-uv sync --extra contributor --frozen
-uv run python curriculum/advanced/29-mcp-security-architecture-review-workshop/lab.py
-uv run pytest -q tests/test_course_29_architecture_review.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/advanced/29-mcp-security-architecture-review-workshop/lab.py
+uv run --frozen pytest -q tests/test_course_29_architecture_review.py
 ```
 
 The lab is offline and credential-free. It uses dataclasses for explicit

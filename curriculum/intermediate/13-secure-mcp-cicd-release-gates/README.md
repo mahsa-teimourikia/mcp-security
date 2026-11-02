@@ -353,7 +353,7 @@ python3 lab.py
 From the repository root:
 
 ```bash
-pytest -q tests/test_course_13_release_gates.py
+uv run --frozen pytest -q tests/test_course_13_release_gates.py
 ```
 
 The demonstration exercises two realistic failure modes:

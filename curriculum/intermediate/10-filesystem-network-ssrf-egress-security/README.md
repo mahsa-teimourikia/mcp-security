@@ -51,9 +51,9 @@ audience-bound credentials, authorization, and workload isolation.
 From the repository root:
 
 ```bash
-uv sync --extra contributor
-uv run python curriculum/intermediate/10-filesystem-network-ssrf-egress-security/lab.py
-uv run pytest -q tests/test_course_10_filesystem_network.py
+uv sync --locked --extra contributor
+uv run --frozen python curriculum/intermediate/10-filesystem-network-ssrf-egress-security/lab.py
+uv run --frozen pytest -q tests/test_course_10_filesystem_network.py
 ```
 
 No cloud account, credential, or live endpoint is required. The network and DNS
@@ -333,7 +333,7 @@ Expected scenario evidence:
 ## Testing and metrics
 
 ```bash
-uv run pytest -q tests/test_course_10_filesystem_network.py
+uv run --frozen pytest -q tests/test_course_10_filesystem_network.py
 ```
 
 The suite covers unknown/cross-tenant IDs, traversal and symlinks, size/digest

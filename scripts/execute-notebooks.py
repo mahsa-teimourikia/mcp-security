@@ -3,6 +3,7 @@
 import argparse
 import json
 import os
+import re
 import sys
 import tempfile
 from pathlib import Path
@@ -18,7 +19,10 @@ def discover(track: str | None) -> list[Path]:
     tracks = (track,) if track else ("beginner", "intermediate", "advanced")
     notebooks = []
     for name in tracks:
-        notebooks.extend(sorted((ROOT / "curriculum" / name).glob("*/*.ipynb")))
+        notebooks.extend(
+            path for path in sorted((ROOT / "curriculum" / name).glob("*/*.ipynb"))
+            if not re.search(r" \d+\.ipynb$", path.name)
+        )
     return notebooks
 
 

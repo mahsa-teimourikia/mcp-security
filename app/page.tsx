@@ -13,14 +13,21 @@ export function App() {
   const [selected, setSelected] = useState<Lesson>(lessons[0]);
   const [completed, setCompleted] = useState<string[]>(() => {
     try {
-      return JSON.parse(localStorage.getItem("mcp-security-progress") ?? "[]");
+      const saved = JSON.parse(localStorage.getItem("mcp-security-progress") ?? "[]");
+      return Array.isArray(saved)
+        ? saved.filter((id): id is string => typeof id === "string" && lessons.some((lesson) => lesson.id === id))
+        : [];
     } catch {
       return [];
     }
   });
 
   useEffect(() => {
-    localStorage.setItem("mcp-security-progress", JSON.stringify(completed));
+    try {
+      localStorage.setItem("mcp-security-progress", JSON.stringify(completed));
+    } catch {
+      // Progress remains available for this session when storage is unavailable.
+    }
   }, [completed]);
 
   const visible = useMemo(
@@ -34,6 +41,14 @@ export function App() {
         ? current.filter((id) => id !== selected.id)
         : [...current, selected.id],
     );
+  };
+
+  const chooseLevel = (item: (typeof levels)[number]) => {
+    setLevel(item);
+    if (item !== "All" && selected.level !== item) {
+      const firstLesson = lessons.find((lesson) => lesson.level === item);
+      if (firstLesson) setSelected(firstLesson);
+    }
   };
 
   return (
@@ -81,7 +96,7 @@ export function App() {
 
           <div className="filters" role="group" aria-label="Filter lessons by level">
             {levels.map((item) => (
-              <button key={item} className={level === item ? "active" : ""} onClick={() => setLevel(item)}>
+              <button key={item} className={level === item ? "active" : ""} onClick={() => chooseLevel(item)}>
                 {item} <span>{item === "All" ? lessons.length : lessons.filter((lesson) => lesson.level === item).length}</span>
               </button>
             ))}
@@ -97,8 +112,8 @@ export function App() {
               >
                 <span className={`pill ${lesson.level.toLowerCase()}`}>{lesson.level}</span>
                 <span className="number">{lesson.step}</span>
-                <h3>{lesson.title}{completed.includes(lesson.id) ? <small> ✓</small> : null}</h3>
-                <p>{lesson.summary}</p>
+                <span className="lesson-title">{lesson.title}{completed.includes(lesson.id) ? <small> ✓</small> : null}</span>
+                <span className="lesson-summary">{lesson.summary}</span>
               </button>
             ))}
           </div>
@@ -119,7 +134,7 @@ export function App() {
             <a href={sourceUrl(selected.readme)}><b>01</b><span>Read the chapter<small>Theory, architecture, failures, and production guidance</small></span></a>
             <a href={sourceUrl(selected.lab)}><b>02</b><span>Run the lab<small>Credential-free reusable implementation</small></span></a>
             <a href={sourceUrl(selected.notebook)}><b>03</b><span>Open the notebook<small>Guided execution, failure injection, and reflection</small></span></a>
-            <a href="quiz/"><b>04</b><span>Take the checkpoint<small>Architecture judgment and failure analysis</small></span></a>
+            <a href={`quiz/?course=${Number(selected.step)}`}><b>04</b><span>Take the checkpoint<small>{selected.title} · architecture judgment and failure analysis</small></span></a>
           </div>
         </section>
 
